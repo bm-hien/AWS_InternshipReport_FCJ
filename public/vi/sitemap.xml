@@ -39,6 +39,18 @@
                 href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/1-introduction/"
                 />
   </url><url>
+    <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.1/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/4-frontend/4.1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.1/"
+                />
+  </url><url>
     <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/</loc>
     <xhtml:link
                 rel="alternate"
@@ -49,6 +61,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/"
+                />
+  </url><url>
+    <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.1/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/3-ai/3.1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.1/"
                 />
   </url><url>
     <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week1/</loc>
@@ -171,6 +195,18 @@
                 href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/"
                 />
   </url><url>
+    <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/3-ai/3.2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.2/"
+                />
+  </url><url>
     <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.2/</loc>
     <xhtml:link
                 rel="alternate"
@@ -183,6 +219,18 @@
                 href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.2/"
                 />
   </url><url>
+    <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.2/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/4-frontend/4.2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.2/"
+                />
+  </url><url>
     <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/blog2/</loc>
     <xhtml:link
                 rel="alternate"
@@ -193,6 +241,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/blog2/"
+                />
+  </url><url>
+    <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/3-ai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/"
                 />
   </url><url>
     <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/blog1/</loc>
@@ -231,6 +291,18 @@
                 href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/"
                 />
   </url><url>
+    <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.3/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/4-frontend/4.3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.3/"
+                />
+  </url><url>
     <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.3/</loc>
     <xhtml:link
                 rel="alternate"
@@ -241,6 +313,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.3/"
+                />
+  </url><url>
+    <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.3/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/3-ai/3.3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.3/"
                 />
   </url><url>
     <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/</loc>
@@ -339,6 +423,18 @@
                 href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/event7/"
                 />
   </url><url>
+    <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/4-frontend/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/"
+                />
+  </url><url>
     <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.4/</loc>
     <xhtml:link
                 rel="alternate"
@@ -349,6 +445,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.4/"
+                />
+  </url><url>
+    <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/5-cicd/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/5-cicd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/5-cicd/"
                 />
   </url><url>
     <loc>http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.5/</loc>

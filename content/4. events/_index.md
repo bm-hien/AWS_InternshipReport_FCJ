@@ -25,7 +25,7 @@ pre: " <b> 4. </b> "
 
 ## [Event 3](event3/)
 - **Event Name:** Data Resiliency in a Cloud-first World - AWS + Commvault
-- **Time:** 8:30 AM - 4:00 PM on November 15, 2025
+- **Time:** 8:30 AM - 4:00 PM on October 15, 2025
 - **Location:** AWS Event Center, Ho Chi Minh City
 - **Role in Event:** Participant
 - **Description:** Full-day event on data resiliency, cyber resilience, and backup strategies in cloud environments

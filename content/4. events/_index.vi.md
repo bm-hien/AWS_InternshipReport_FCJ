@@ -28,7 +28,7 @@ Trong quá trình thực tập, em đã tham gia 7 events, với mỗi event là
 
 ## [Event 3](event3/)
 - **Tên sự kiện:** Data Resiliency in a Cloud-first World - AWS + Commvault
-- **Thời gian:** 8:30 AM - 4:00 PM ngày 15/11/2025
+- **Thời gian:** 8:30 AM - 4:00 PM ngày 15/10/2025
 - **Địa điểm:** AWS Event Center, Thành phố Hồ Chí Minh
 - **Vai trò trong sự kiện:** Người tham dự
 - **Mô tả:** Sự kiện cả ngày về data resiliency, cyber resilience và chiến lược backup trong môi trường cloud
