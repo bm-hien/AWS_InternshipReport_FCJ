@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Events Participated on AWS System Manager</title>
-    <link>http://localhost:59682/AWS_InternshipReport_FCJ/4.-events/</link>
+    <link>http://localhost:56123/AWS_InternshipReport_FCJ/4.-events/</link>
     <description>Recent content in Events Participated on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:59682/AWS_InternshipReport_FCJ/4.-events/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:56123/AWS_InternshipReport_FCJ/4.-events/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

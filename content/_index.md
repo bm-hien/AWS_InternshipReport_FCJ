@@ -24,23 +24,23 @@ chapter : false
 
 ## Report Content
 
-### [Worklog](WorkLog/)
+### [Worklog](1.%20WorkLog/)
 Detailed weekly activities and learning progress during the internship period
 
-### [Proposal](proposal/)
+### [Proposal](2.%20Proposal/)
 Internship project proposals and technical documentation
 
-### [Translated Blogs](translated-blogs/)
+### [Translated Blogs](3.%20translated-blogs/)
 Technical blog translations and knowledge sharing content
 
-### [Events Participated](events/)
+### [Events Participated](4.%20events/)
 Workshops, seminars, and training sessions attended
 
-### [Workshop](workshop/)
+### [Workshop](5-Workshop/)
 Hands-on technical workshops and practical exercises
 
-### [Self-evaluation](self-evaluation/)
+### [Self-evaluation](6.%20Self-Ass/)
 Personal assessment and reflection on learning outcomes
 
-### [Sharing and Feedback](sharing-feedback/)
+### [Sharing and Feedback](7.%20Sharing%20and%20Feedback/)
 Knowledge sharing sessions and feedback from mentors

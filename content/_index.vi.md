@@ -23,23 +23,23 @@ chapter : false
 
 ## Nội Dung Báo Cáo
 
-### [Nhật Ký Công Việc](WorkLog/)
+### [Nhật Ký Công Việc](1.%20WorkLog/)
 Chi tiết hoạt động hàng tuần và tiến độ học tập trong thời gian thực tập
 
-### [Bản Đề Xuất](proposal/)
+### [Bản Đề Xuất](2.%20Proposal/)
 Đề xuất dự án thực tập và tài liệu kỹ thuật
 
-### [Các bài Blogs đã dịch ](translated-blogs/)
+### [Các bài Blogs đã dịch ](3.%20translated-blogs/)
 Nội dung dịch thuật blog kỹ thuật và chia sẻ kiến thức
 
-### [Các Sự Kiện Tham Gia](events/)
+### [Các Sự Kiện Tham Gia](4.%20events/)
 Workshop, hội thảo và các buổi đào tạo đã tham gia
 
-### [Workshop](workshop/)
+### [Workshop](5-Workshop/)
 Workshop kỹ thuật thực hành và bài tập thực tế
 
-### [Tự Đánh Giá](self-evaluation/)
+### [Tự Đánh Giá](6.%20Self-Ass/)
 Đánh giá cá nhân và phản tư về kết quả học tập
 
-### [Chia Sẻ và Phản Hồi](sharing-feedback/)
+### [Chia Sẻ và Phản Hồi](7.%20Sharing%20and%20Feedback/)
 Buổi chia sẻ kiến thức và phản hồi từ mentor
