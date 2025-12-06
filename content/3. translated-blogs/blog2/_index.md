@@ -4,6 +4,10 @@ weight: 3.2
 pre: " <b> 3.2. </b> "
 
 ---
+
+![Blog Header](/images/blog/blog2/Blog-Header.png)
+*Humane World for Animals AWS Implementation*
+
 ### **Humane World for Animals uses AWS to scale global animal welfare programs**
 
 by Stacy Stonich and Jules Marenghi | on 24 SEP 2025 | in [Customer Solutions](https://aws.amazon.com/blogs/publicsector/category/post-types/customer-solutions/), [Nonprofit](https://aws.amazon.com/blogs/publicsector/category/public-sector/nonprofit/), [Public Sector](https://aws.amazon.com/blogs/publicsector/category/public-sector/)  | [Permalink](https://aws.amazon.com/blogs/publicsector/humane-world-for-animals-uses-aws-to-scale-global-animal-welfare-programs/) 
@@ -53,3 +57,11 @@ The success of Humane World Apps demonstrates the transformative power of cloud 
 As the organization continues to expand its reach and refine its platform, the lessons learned from this implementation will undoubtedly benefit the broader animal welfare community. The combination of innovative technology, dedicated volunteers, and strategic partnerships has created a powerful tool for creating positive change in the lives of animals worldwide.
 
 The future of animal welfare programs lies in data-driven approaches that can adapt to local needs while maintaining global standards. Humane World Apps represents a significant step forward in this direction, demonstrating how technology can be harnessed to create more effective, efficient, and humane solutions to complex global challenges.
+
+### **Authors**
+
+![Author 1](/images/blog/blog2/author1.jpg)
+*Stacy Stonich*
+
+![Author 2](/images/blog/blog2/author2.jpg)
+*Jules Marenghi*

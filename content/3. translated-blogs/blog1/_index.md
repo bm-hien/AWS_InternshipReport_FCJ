@@ -45,7 +45,28 @@ Before getting started, you need the following:
 
 The table below summarizes key CloudWatch metrics for OpenSearch Serverless, including recommended alert thresholds, metric descriptions, and applicable workload types.
 
-[Content continues with detailed metrics table and implementation guidance...]
+![CloudWatch Metrics Overview](/images/blog/blog1/bl1img1.jpg)
+*CloudWatch metrics dashboard for OpenSearch Serverless*
+
+![Monitoring Setup](/images/blog/blog1/bl1img2.jpg)
+*Setting up monitoring alerts*
+
+![Alert Configuration](/images/blog/blog1/bl1img3.jpg)
+*Configuring CloudWatch alarms*
+
+![Performance Metrics](/images/blog/blog1/bl1img4.jpg)
+*Performance metrics visualization*
+
+![Historical Analysis](/images/blog/blog1/bl1img5.jpg)
+*Historical data analysis dashboard*
+
+### **Authors**
+
+![Author 1](/images/blog/blog1/author1.png)
+*Urmila Iyer*
+
+![Author 2](/images/blog/blog1/author2.jpeg)
+*Parth Shah*
 
 ---
 
