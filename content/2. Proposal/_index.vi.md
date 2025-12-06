@@ -1,8 +1,9 @@
 ---
-title: "Bản Đề xuất Flyora"
+title: "Đề xuất Strangers"
 date: 2024-01-01T00:00:00Z
-weight: 2
+draft: false
 pre: " <b> 2. </b> "
+
 ---
 
 <style>
@@ -14,6 +15,8 @@ body, html {
 
 
 ## 🐦 Đề xuất: Flyora – Nền tảng Thương mại Điện tử cho Người yêu Chim
+
+📄 **[Tải Xuống Đề xuất PDF Đầy đủ](/Proposal%20FLYORA.pdf)**
 
 ### 1. Tóm tắt Điều hành
 Flyora là một ứng dụng web chuyên biệt được thiết kế để phục vụ những người đam mê chim cảnh trên khắp Việt Nam. Nền tảng cung cấp các sản phẩm được tuyển chọn như thức ăn chim, đồ chơi, lồng và phụ kiện trang trí phù hợp với các loài như Chào Mào, Vẹt, Yến Phụng và Chích Chòe. Được xây dựng với công nghệ web hiện đại và lưu trữ trên AWS, Flyora đảm bảo khả năng mở rộng, hiệu suất và truy cập an toàn. Nền tảng hướng tới trở thành điểm đến hàng đầu cho việc chăm sóc và trang trí chim, kết hợp thương mại điện tử với cá nhân hóa và tương tác cộng đồng.
@@ -34,7 +37,7 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 
 ### 3. Kiến trúc Giải pháp
 #### 📄 Sơ đồ Kiến trúc Hệ thống
-![Sơ đồ Kiến trúc Hệ thống](/images/SystemArch.drawio.png)
+![Sơ đồ Kiến trúc Hệ thống](https://phucqb.sirv.com/Images/4a27331b2b7fa421fd6e.jpg)
 
 #### 🧩 Frontend (Tầng Web)
 * **Amazon S3**: Lưu trữ web tĩnh cho tài sản frontend
@@ -42,9 +45,8 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 * **Thiết kế đáp ứng**: Giao diện thân thiện với di động
 
 #### 🔐 Xác thực & Bảo mật
-* **Amazon Cognito**: Xác thực và ủy quyền người dùng
 * **IAM**: Quản lý danh tính và truy cập
-* **CloudWatch**: Giám sát và lớp bảo mật
+* **CloudWatch & AWS X-Ray**: Giám sát và theo dõi phân tán
 
 #### 🔄 Dịch vụ Backend (Tầng Ứng dụng)
 * **Amazon API Gateway**: Quản lý API RESTful
@@ -75,7 +77,7 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 
 #### Tháng 1 - Tập trung Học AWS:
 - **Tuần 1-2**: Cơ bản AWS (S3, Lambda, API Gateway, DynamoDB)
-- **Tuần 3**: Dịch vụ nâng cao (Cognito, Bedrock, OpenSearch)
+- **Tuần 3**: Dịch vụ nâng cao (Bedrock, OpenSearch)
 - **Tuần 4**: Thiết kế kiến trúc và mô hình hóa cơ sở dữ liệu với MySQL Workbench
 
 #### Yêu cầu Kỹ thuật:
@@ -96,22 +98,26 @@ Flyora mang đến trải nghiệm mua sắm theo danh mục đáp ứng với x
 
 ---
 
-### 6. Ước tính Ngân sách
+### 6. Ước tính Chi phí
 
-| Mục                              | Chi phí Hàng tháng | Chi phí Hàng năm |
-|-----------------------------------|-------------------|------------------|
-| Amazon S3 + CloudFront            | $0.20             | $2.40            |
-| AWS Lambda                       | $0.00             | $0.00            |
-| Amazon API Gateway                | $0.01             | $0.12            |
-| DynamoDB                          | $0.25             | $3.00            |
-| Amazon Cognito                    | $0.08             | $0.96            |
-| CloudWatch & Logs                 | $0.05             | $0.60            |
-| Amazon Bedrock (Nhúng/LLM)        | $0.10             | $1.20            |
-| Amazon RDS for PostgreSQL         | $0.20             | $2.40            |
-| CodePipeline/CodeBuild            | $0.05             | $0.60            |
-| **Tổng Ước tính**                 | **$0.94**         | **$11.28**       |
+| Dịch vụ                          | Chi phí Hàng tháng | Chi phí Hàng năm | Chi tiết tính toán          |
+|-----------------------------------|-------------------|------------------|-----------------------------|
+| Amazon S3                         | $0.13             | $1.56            | - Lưu trữ: 5GB                |
+| AWS Lambda                        | $0.00             | $0.00            | - 10.000 request<br>- 512 MB Ephemeral storage<br>- 256 MB Memory<br>- Duration: 150ms |
+| Amazon API Gateway (REST API)     | $0.04             | $0.48            | - 10.000 request              |
+| DynamoDB (on-demand capacity)     | $0.01             | $0.12            | - Data storage size: 0.01 GB<br>- Number of writes: 0.01 million<br>- Number of reads: 0.02 million |
+| X-ray                             | $0.01             | $0.96            | - 10.000 request<br>- Sampling rate: 10%<br>- Traces retrieved per query: 20 |
+| CloudWatch & Logs                 | $0.00             | $0.00            |                             |
+| Amazon Bedrock (Embedding/LLM)    | $0.13             | $1.56            | - Cohere Embed Multilingual (83%), Claude 3 Haiku (17%)<br>- 3.000 request |
+| Amazon RDS for PostgreSQL         | $21.01            | $252.12          | - db.t4g.micro<br>- Storage: 20GB |
+| Data transfer                     | $0.00             | $0.00            | - Free tier: 1 GB              |
+| CloudFront                        | $0.11             | $1.32            | - 10.000 request<br>- Data Transfer Out: Free tier 1 GB (global) |
+| CodePipeline      | $0.00        | $0.00       |- 1 pipeline|
+| CodeBuild      | $1.26        | $15.12       |- arm1.2xlarge <br> - 7 builds in a month <br> - Average build duration: 2 minutes|
+| VPC                               | $32.85            | $394.20          | - Hourly Charge: 24h<br>- Data Processing: 3.000 request |
+| **Tổng Ước tính**                 | **$55.55**        | **$667.44**      |                             |
 
-Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
+Lưu ý: Chi phí phần cứng không áp dụng do Flyora là nền tảng web hoàn toàn.
 
 ---
 
@@ -130,9 +136,9 @@ Chi phí phần cứng không áp dụng vì Flyora là nền tảng chỉ web.
 ### 8. Kết quả Mong đợi
 
 #### Cải tiến Kỹ thuật:
-- Giao diện người dùng đáp ứng, thân thiện với di động
-- Xác thực người dùng an toàn và quản lý vai trò (Cognito, IAM)
-- Backend có thể mở rộng với Lambda/API Gateway
+* Giao diện người dùng đáp ứng, thân thiện với di động
+* Xác thực người dùng an toàn và quản lý vai trò (IAM)
+* Backend có thể mở rộng với Lambda/API Gateway
 - Lọc sản phẩm thời gian thực và hỗ trợ chatbot
 - Tính năng AI qua Bedrock (Nhúng/LLM)
 - Lưu trữ dữ liệu mạnh mẽ với RDS, DynamoDB, S3
