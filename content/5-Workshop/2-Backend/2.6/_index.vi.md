@@ -11,16 +11,16 @@ pre: " <b> 5.2.6. </b> "
 
 * Vào **AWS Management Console** → tìm **IAM**.
 
-![IAM\_1](/images/2.prerequisite/iam_1.png)
+![IAM\_1](/images/5-Workshop/2.prerequisite/iam_1.png)
 
 * Chọn **Roles** → **Create Role**.
 
-![IAM\_2](/images/2.prerequisite/iam_2.png)
+![IAM\_2](/images/5-Workshop/2.prerequisite/iam_2.png)
 
 * Chọn **Trusted entity type:** *AWS service*.
 * Chọn **Use case:** *Lambda*, sau đó nhấn **Next**.
 
-![IAM\_3](/images/2.prerequisite/iam_3.png)
+![IAM\_3](/images/5-Workshop/2.prerequisite/iam_3.png)
 
 #### Gán quyền truy cập cho Role
 

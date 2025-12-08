@@ -11,16 +11,16 @@ pre: " <b> 5.2.6. </b> "
 
 * Go to **AWS Management Console** → search for **IAM**.
 
-![IAM_1](/images/2.prerequisite/iam_1.png)
+![IAM\_1](/images/5-Workshop/2.prerequisite/iam_1.png)
 
 * Select **Roles** → **Create Role**.
 
-![IAM_2](/images/2.prerequisite/iam_2.png)
+![IAM\_2](/images/5-Workshop/2.prerequisite/iam_2.png)
 
 * Choose **Trusted entity type:** *AWS service*.  
 * Choose **Use case:** *Lambda*, then click **Next**.
 
-![IAM_3](/images/2.prerequisite/iam_3.png)
+![IAM\_3](/images/5-Workshop/2.prerequisite/iam_3.png)
 
 #### Attach Permissions to the Role
 

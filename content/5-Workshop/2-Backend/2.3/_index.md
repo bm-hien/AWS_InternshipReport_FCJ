@@ -13,7 +13,7 @@ Create a new **Lambda Function** to process requests to DynamoDB through API Gat
 ## Steps
 
 {{% notice info %}}
-Download the backend file from [here](/files/backend07.zip).
+Download the backend file from [here](/files/backend12.zip).
 {{% /notice %}}
 
 ---
@@ -87,3 +87,5 @@ Download the backend file from [here](/files/backend07.zip).
    - **Value:** `huntrotflyorateam!@ky5group5member`
 
 ![LAMBDA_9](/images/5-Workshop/3.api-gateway/3.1/lambda_9.png)
+
+5. Key: `GHN_TOKEN`; Value: `445c659d-5586-11f0-8c19-5aba781b9b65`

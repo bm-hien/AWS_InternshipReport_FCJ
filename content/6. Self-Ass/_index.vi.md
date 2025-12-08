@@ -9,6 +9,7 @@ pre: "<b> 6. </b>"
 # Tự đánh giá
 
 Trong thời gian thực tập tại **AWS Vietnam** từ **7/9/2025** đến **24/12/2025**, em đã có cơ hội được học hỏi, thực hành và áp dụng những kiến thức đã học ở trường vào môi trường bootcamp.
+
 Em đã tham gia Backend CI/CD cho dự án Flyora - một nền tảng thương mại điện tử, qua đó em đã cải thiện kỹ năng về [Amazon well-architectured services].
 
 Về thái độ làm việc, em luôn cố gắng hoàn thành tốt công việc, tuân thủ các quy định của nơi làm việc và tích cực giao tiếp với đồng nghiệp để nâng cao hiệu quả công việc.

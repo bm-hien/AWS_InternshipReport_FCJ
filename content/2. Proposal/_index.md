@@ -1,15 +1,13 @@
 ---
-title: "Strangers_Proposal"
+title: "Proposal"
 date: 2024-01-01T00:00:00Z
 draft: false
-pre: " <b> 2. </b> "
-
 ---
 
 
 ## 🐦 Proposal: Flyora – E-commerce Platform for Bird Lovers
 
-📄 **[Download Full Proposal PDF](/Proposal%20FLYORA.pdf)**
+📄 **[Download Full Proposal PDF](files/Proposal%20FLYORA.pdf)**
 
 ### 1. Executive Summary
 Flyora is a specialized web application designed to serve bird enthusiasts across Vietnam. It offers curated products such as bird food, toys, cages, and decorative accessories tailored to species like Chào Mào, Vẹt, Yến Phụng, and Chích Chòe. Built with modern web technologies and hosted on AWS, Flyora ensures scalability, performance, and secure access. The platform aims to become the go-to destination for bird care and ornamentation, combining e-commerce with personalization and community engagement.
@@ -96,22 +94,38 @@ Flyora delivers a responsive, category-driven shopping experience with secure us
 
 ### 6. Budget Estimation
 
+| Item                                     | Monthly Cost | Annual Cost |
+|------------------------------------------|--------------|-------------|
+| Amazon S3 (Simple Storage Service)       | $0.15        | $1.80       |
+| AWS Lambda (Serverless Compute)          | $0.00        | $0.00       |
+| Amazon API Gateway (REST API Endpoints)  | $0.04        | $0.48       |
+| DynamoDB (On-demand NoSQL Database)      | $0.00        | $0.00       |
+| AWS X-Ray (Application Monitoring)        | $0.01        | $0.12       |
+| Amazon CloudWatch (Monitoring & Logs)    | $0.00        | $0.00       |
+| Amazon Bedrock (AI/LLM Services)          | $3.49        | $41.88      |
+| Amazon RDS for PostgreSQL (Relational DB) | $21.01       | $252.12     |
+| AWS Data Transfer (Network Traffic)       | $0.00        | $0.00       |
+| Amazon CloudFront (CDN Service)          | $0.10        | $1.20       |
+| AWS CodePipeline (CI/CD Automation)      | $0.00        | $0.00       |
+| AWS CodeBuild (Build Service)             | $2.52        | $30.24      |
+| Amazon VPC (Virtual Private Cloud)        | $43.07       | $516.84     |
+| **Total Estimate**                        | **$70.39**   | **$844.68** |
 | Item                        | Monthly Cost | Annual Cost |Detail Calculation|
 |-----------------------------|--------------|-------------|------------------|
-| Amazon S3       | $0.13        | $1.56       |- Storage: 5GB <br>|
-| AWS Lambda                  | $0.00        | $0.00       |- 10.000 request<br> - 512 MB Ephemeral storage <br> - 256 MB Memory <br>- Duration: 150ms|
-| Amazon API Gateway(REST API)          | $0.04        | $0.48       |10.000 request|
-| DynamoDB(DynamoDB on-demand capacity)                    | $0.01        | $0.12       |- Data storage size: 0.01 GB <br>- Number of writes: 0.01 million<br>- Number of reads 0.02 million |
-| X-ray              | $0.01        | $0.96       |- 10.000 request <br>0- Sampling rate: 10% <br> - Traces retrieved per query: 20|
-| CloudWatch & Logs           | $0.00        | $0.00       ||
-| Amazon Bedrock (Embedding/LLM)| $0.13      | $1.56       |- Cohere Embed Multilingual (83%), Claude 3 Haiku (17%)<br> - 3000 request|
-| Amazon RDS for PostgreSQL   | $21.01        | $252.12       | - db.t4g.micro<br> - Storage: 20GB|
-| Data transfer               | $0.00        | $0.00       | - Free tier: 1 GB|
-| CloudFront      | $0.11        | $1.32       |- 10000 requests<br> -Data Transfer Out: Free tier: 1 GB (global) |
+| Amazon S3                         | $0.15             | $1.8            | - Storage: 1GB                |
+| AWS Lambda                        | $0.00             | $0.00            | - 10.000 request<br>- 512 MB Ephemeral storage<br>- 256 MB Memory<br>- Duration: 150ms |
+| Amazon API Gateway (REST API)     | $0.04             | $0.48            | - 10.000 request              |
+| DynamoDB (on-demand capacity)     | $0.00             | $0.00            | - Data storage size: 0.01 GB<br>- Number of writes: 0.01 million<br>- Number of reads: 0.02 million |
+| X-ray                             | $0.01             | $0.12            | - 10.000 request<br>- Sampling rate: 10%<br>- Traces retrieved per query: 20 |
+| CloudWatch & Logs                 | $0.00             | $0.00            |                             |
+| Amazon Bedrock (Embedding/LLM)    | $3.49             | $41.88            | - Cohere Embed Multilingual (83%), Claude 3 Haiku (17%)<br>- 3.000 request |
+| Amazon RDS for PostgreSQL         | $21.01            | $252.12          | - db.t4g.micro<br>- Storage: 20GB |
+| Data transfer                     | $0.00             | $0.00            | - Free tier: 1 GB              |
+| CloudFront                        | $0.10             | $1.2            | - 10.000 request<br>- Data Transfer Out: Free tier 1 GB (global) |
 | CodePipeline      | $0.00        | $0.00       |- 1 pipeline|
-| CodeBuild      | $1.26        | $15.12       |- arm1.2xlarge <br> - 7 builds in a month <br> - Average build duration: 2 minutes|
-| VPC      | $32.85        | $394.2       |Hourly Charge: 24h <br> Data Processing: 3000 request|
-| **Total Estimate**          | **$55.55**    | **$667.44**  ||
+| CodeBuild      | $2.52        | $30.24       |- arm1.2xlarge <br> - 14 builds in a month <br> - Average build duration: 2 minutes|
+| VPC                               | $43.07            | $516.84          | - Hourly Charge: 24h<br>- Data Processing: 3.000 request <br> - 1 Nat gateway |
+| **Total Estimate**          | **$70.39**    | **$844.68**  ||
 
 Hardware costs are not applicable as Flyora is a web-only platform.
 

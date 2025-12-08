@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Backend Workshop (API &amp; Data Layer) on AWS System Manager</title>
-    <link>http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/2-backend/</link>
+    <link>https://dophucduy.github.io/AWS_InternshipReport_FCJ/5-workshop/2-backend/</link>
     <description>Recent content in Backend Workshop (API &amp; Data Layer) on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/2-backend/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/5-workshop/2-backend/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

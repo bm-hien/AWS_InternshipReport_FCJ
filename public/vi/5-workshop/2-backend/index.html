@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head><script src="/AWS_InternshipReport_FCJ/livereload.js?mindelay=10&amp;v=2&amp;port=59682&amp;path=AWS_InternshipReport_FCJ/livereload" data-no-instant defer></script>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.150.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
-    <link rel="icon" href="http://localhost:59682/AWS_InternshipReport_FCJ/images/favicon.png" type="image/png">
+    <link rel="icon" href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/images/favicon.png" type="image/png">
 
     <title>Backend Workshop (BE) :: AWS System Manager</title>
 
     
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/nucleus.css?1765057841" rel="stylesheet">
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/fontawesome-all.min.css?1765057841" rel="stylesheet">
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/hybrid.css?1765057841" rel="stylesheet">
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/featherlight.min.css?1765057841" rel="stylesheet">
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/perfect-scrollbar.min.css?1765057841" rel="stylesheet">
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/auto-complete.css?1765057841" rel="stylesheet">
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/atom-one-dark-reasonable.css?1765057841" rel="stylesheet">
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/theme.css?1765057841" rel="stylesheet">
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/hugo-theme.css?1765057841" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/nucleus.css?1765166971" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/fontawesome-all.min.css?1765166971" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/hybrid.css?1765166971" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/featherlight.min.css?1765166971" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/perfect-scrollbar.min.css?1765166971" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/auto-complete.css?1765166971" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/atom-one-dark-reasonable.css?1765166971" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/theme.css?1765166971" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/hugo-theme.css?1765166971" rel="stylesheet">
     
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/css/theme-workshop.css?1765057841" rel="stylesheet">
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/css/theme-workshop.css?1765166971" rel="stylesheet">
     
     
 
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/jquery-3.3.1.min.js?1765057841"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/jquery-3.3.1.min.js?1765166971"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,14 +36,14 @@
     </style>
     
   </head>
-  <body class="" data-url="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/">
+  <body class="" data-url="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="http://localhost:59682/AWS_InternshipReport_FCJ/">
+      <a id="logo" href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/">
 
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="http://localhost:59682/AWS_InternshipReport_FCJ/js/lunr.min.js?1765057841"></script>
-<script type="text/javascript" src="http://localhost:59682/AWS_InternshipReport_FCJ/js/auto-complete.js?1765057841"></script>
+<script type="text/javascript" src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/lunr.min.js?1765166971"></script>
+<script type="text/javascript" src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/auto-complete.js?1765166971"></script>
 <script type="text/javascript">
     
-        var baseurl = "http:\/\/localhost:59682\/AWS_InternshipReport_FCJ\/\/vi";
+        var baseurl = "https:\/\/dophucduy.github.io\/AWS_InternshipReport_FCJ\/\/vi";
     
 </script>
-<script type="text/javascript" src="http://localhost:59682/AWS_InternshipReport_FCJ/js/search.js?1765057841"></script>
+<script type="text/javascript" src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/search.js?1765166971"></script>
 
     
   </div>
@@ -87,7 +87,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/">
            <b> 1. </b> Nhật Ký Công Việc
           
             <i class="fas fa-check read-icon"></i>
@@ -118,7 +118,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week1/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/week1/">
            <b> 1.1. </b> Tuần 1: Nền Tảng
           
             <i class="fas fa-check read-icon"></i>
@@ -146,7 +146,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week2/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/week2/">
            <b> 1.2. </b> Tuần 2: Dịch Vụ Tính Toán
           
             <i class="fas fa-check read-icon"></i>
@@ -174,7 +174,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week3/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/week3/">
            <b> 1.3. </b> Tuần 3: Lưu Trữ &amp; Cơ Sở Dữ Liệu
           
             <i class="fas fa-check read-icon"></i>
@@ -202,7 +202,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week4/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/week4/">
            <b> 1.4. </b> Tuần 4: Mạng &amp; Bảo Mật
           
             <i class="fas fa-check read-icon"></i>
@@ -230,7 +230,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week5/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/week5/">
            <b> 1.5. </b> Tuần 5: Giám Sát &amp; Quản Lý
           
             <i class="fas fa-check read-icon"></i>
@@ -258,7 +258,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week6/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/week6/">
            <b> 1.6. </b> Tuần 6: Chủ Đề Nâng Cao
           
             <i class="fas fa-check read-icon"></i>
@@ -286,7 +286,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week7/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/week7/">
            <b> 1.7. </b> Tuần 7
           
             <i class="fas fa-check read-icon"></i>
@@ -314,7 +314,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week8/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/week8/">
            <b> 1.8. </b> Tuần 8
           
             <i class="fas fa-check read-icon"></i>
@@ -342,7 +342,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/1.-worklog/week9/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/1.-worklog/week9/">
            <b> 1.9. </b> Tuần 9
           
             <i class="fas fa-check read-icon"></i>
@@ -377,7 +377,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/">
            <b> 3. </b> Bài Viết Dịch Thuật
           
             <i class="fas fa-check read-icon"></i>
@@ -408,7 +408,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/blog2/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/blog2/">
            <b> 3.2. </b>  Humane World for Animals uses AWS to scale global animal welfare programs
           
             <i class="fas fa-check read-icon"></i>
@@ -436,7 +436,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/blog1/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/blog1/">
            <b> 3.1. </b> AWS Big Data Blog - OpenSearch Serverless Monitoring
           
             <i class="fas fa-check read-icon"></i>
@@ -464,7 +464,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/blog3/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/3.-translated-blogs/blog3/">
            <b> 3.3. </b> AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking
           
             <i class="fas fa-check read-icon"></i>
@@ -499,7 +499,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/4.-events/">
            <b> 4. </b> Các Events Đã Tham Gia
           
             <i class="fas fa-check read-icon"></i>
@@ -530,7 +530,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/event1/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/4.-events/event1/">
            <b> 4.1. </b> Event 1
           
             <i class="fas fa-check read-icon"></i>
@@ -558,7 +558,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/event2/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/4.-events/event2/">
            <b> 4.2. </b> Event 2
           
             <i class="fas fa-check read-icon"></i>
@@ -586,7 +586,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/event3/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/4.-events/event3/">
            <b> 4.3. </b> Event 3
           
             <i class="fas fa-check read-icon"></i>
@@ -614,7 +614,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/event4/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/4.-events/event4/">
            <b> 4.4. </b> Event 4
           
             <i class="fas fa-check read-icon"></i>
@@ -642,7 +642,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/event5/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/4.-events/event5/">
            <b> 4.5. </b> Event 5
           
             <i class="fas fa-check read-icon"></i>
@@ -670,7 +670,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/event6/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/4.-events/event6/">
            <b> 4.6. </b> Event 6
           
             <i class="fas fa-check read-icon"></i>
@@ -698,7 +698,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/4.-events/event7/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/4.-events/event7/">
            <b> 4.7. </b> Event 7
           
             <i class="fas fa-check read-icon"></i>
@@ -733,7 +733,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/">
            <b> 5. </b> Workshop
           
             <i class="fas fa-check read-icon"></i>
@@ -764,7 +764,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/1-introduction/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/1-introduction/">
            <b> 5.1. </b> Giới thiệu
           
             <i class="fas fa-check read-icon"></i>
@@ -792,7 +792,7 @@
         active
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/">
            <b> 5.2. </b> Backend Workshop (BE)
           
             <i class="fas fa-check read-icon"></i>
@@ -823,7 +823,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.1/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.1/">
            <b> 5.2.1. </b> Chuẩn bị &amp; Cấu hình Lambda Trigger cho S3
           
             <i class="fas fa-check read-icon"></i>
@@ -851,7 +851,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.2/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.2/">
            <b> 5.2.2. </b> Kiểm tra dữ liệu trong DynamoDB
           
             <i class="fas fa-check read-icon"></i>
@@ -879,7 +879,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.3/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.3/">
            <b> 5.2.3. </b> Tạo API Gateway và tích hợp Lambda
           
             <i class="fas fa-check read-icon"></i>
@@ -907,7 +907,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.4/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.4/">
            <b> 5.2.4. </b> Tạo API Gateway và tích hợp với Lambda
           
             <i class="fas fa-check read-icon"></i>
@@ -935,7 +935,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.5/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.5/">
            <b> 5.2.5. </b> Kiểm thử API bằng Postman
           
             <i class="fas fa-check read-icon"></i>
@@ -963,7 +963,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.6/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.6/">
            <b> 5.2.6. </b> S3 CSV Backup
           
             <i class="fas fa-check read-icon"></i>
@@ -991,7 +991,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.7/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.7/">
            <b> 5.2.7. </b> Tích hợp aws x-ray
           
             <i class="fas fa-check read-icon"></i>
@@ -1028,7 +1028,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/">
            <b> 5.3. </b> AI Workshop (Chatbot)
           
             <i class="fas fa-check read-icon"></i>
@@ -1059,7 +1059,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.1/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.1/">
            <b> 5.3.1. </b> Tạo VPC  &amp; Cấu hình Sercurity Group cho RDS và Lambda
           
             <i class="fas fa-check read-icon"></i>
@@ -1087,7 +1087,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.2/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.2/">
            <b> 5.3.2. </b> Cấu hình RDS và kết nối với Dbeaver
           
             <i class="fas fa-check read-icon"></i>
@@ -1115,7 +1115,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.3/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/3-ai/3.3/">
            <b> 5.3.3. </b> Tạo logic cho hàm lambda
           
             <i class="fas fa-check read-icon"></i>
@@ -1152,7 +1152,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/">
            <b> 5.4. </b> Frontend Workshop (UI)
           
             <i class="fas fa-check read-icon"></i>
@@ -1183,7 +1183,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.1/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.1/">
            <b> 5.4.1. </b> Hosting website với S3
           
             <i class="fas fa-check read-icon"></i>
@@ -1211,7 +1211,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.2/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.2/">
            <b> 5.4.2. </b> Phân phối với CloudFront
           
             <i class="fas fa-check read-icon"></i>
@@ -1239,7 +1239,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.3/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/4-frontend/4.3/">
            <b> 5.4.3. </b> Kết nối với API
           
             <i class="fas fa-check read-icon"></i>
@@ -1276,7 +1276,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/5-cicd/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/5-cicd/">
            <b> 5.5. </b> CI/CD Automation
           
             <i class="fas fa-check read-icon"></i>
@@ -1304,7 +1304,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/6-cleanup/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/6-cleanup/">
            <b> 5.6. </b> Dọn dẹp tài nguyên để tránh phát sinh chi phí
           
             <i class="fas fa-check read-icon"></i>
@@ -1339,7 +1339,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/6.-self-ass/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/6.-self-ass/">
           <b> 6. </b>Tự đánh giá
           
             <i class="fas fa-check read-icon"></i>
@@ -1365,7 +1365,7 @@
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/7.-sharing-and-feedback/">
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/7.-sharing-and-feedback/">
            <b> 7. </b> Chia sẻ và Phản hồi
           
             <i class="fas fa-check read-icon"></i>
@@ -1386,13 +1386,13 @@
  
   
     
-    <li data-nav-id="/vi/2.-proposal/" title="Đề xuất Strangers" class="dd-item 
+    <li data-nav-id="/vi/2.-proposal/" title="Đề xuất" class="dd-item 
         
         
         
         ">
-      <a href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/2.-proposal/">
-           <b> 2. </b> Đề xuất Strangers
+      <a href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/2.-proposal/">
+          Đề xuất
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1439,7 +1439,7 @@
                   
                     
                     
-                      <option id="en" value="http://localhost:59682/AWS_InternshipReport_FCJ/5-workshop/2-backend/">English</option>
+                      <option id="en" value="https://dophucduy.github.io/AWS_InternshipReport_FCJ/5-workshop/2-backend/">English</option>
                     
                   
               
@@ -1453,7 +1453,7 @@
                   
                     
                     
-                      <option id="vi" value="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/" selected>Tiếng Việt</option>
+                      <option id="vi" value="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/" selected>Tiếng Việt</option>
                     
                   
               
@@ -1545,7 +1545,7 @@
             
           
           
-            <a href='http://localhost:59682/AWS_InternshipReport_FCJ/vi/'>Báo Cáo Thực Tập</a> > <a href='http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/'>Workshop</a> > Backend Workshop (BE)
+            <a href='https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/'>Báo Cáo Thực Tập</a> > <a href='https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/'>Workshop</a> > Backend Workshop (BE)
           
         
           
@@ -2384,10 +2384,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/1-introduction/" title="Giới thiệu"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/1-introduction/" title="Giới thiệu"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="http://localhost:59682/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.1/" title="Chuẩn bị &amp; Cấu hình Lambda Trigger cho S3" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/vi/5-workshop/2-backend/2.1/" title="Chuẩn bị &amp; Cấu hình Lambda Trigger cho S3" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2397,19 +2397,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/clipboard.min.js?1765057841"></script>
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/perfect-scrollbar.min.js?1765057841"></script>
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/perfect-scrollbar.jquery.min.js?1765057841"></script>
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/jquery.sticky.js?1765057841"></script>
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/featherlight.min.js?1765057841"></script>
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/highlight.pack.js?1765057841"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/clipboard.min.js?1765166971"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/perfect-scrollbar.min.js?1765166971"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/perfect-scrollbar.jquery.min.js?1765166971"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/jquery.sticky.js?1765166971"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/featherlight.min.js?1765166971"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/highlight.pack.js?1765166971"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/modernizr.custom-3.6.0.js?1765057841"></script>
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/learn.js?1765057841"></script>
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/js/hugo-learn.js?1765057841"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/modernizr.custom-3.6.0.js?1765166971"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/learn.js?1765166971"></script>
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/js/hugo-learn.js?1765166971"></script>
 
-    <link href="http://localhost:59682/AWS_InternshipReport_FCJ/mermaid/mermaid.css?1765057841" rel="stylesheet" />
-    <script src="http://localhost:59682/AWS_InternshipReport_FCJ/mermaid/mermaid.js?1765057841"></script>
+    <link href="https://dophucduy.github.io/AWS_InternshipReport_FCJ/mermaid/mermaid.css?1765166971" rel="stylesheet" />
+    <script src="https://dophucduy.github.io/AWS_InternshipReport_FCJ/mermaid/mermaid.js?1765166971"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

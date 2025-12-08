@@ -97,7 +97,7 @@ Kết nối **AWS API Gateway** với **Lambda Function** để tạo endpoint R
    - **Resource path:** /api/  
    - **Resource Name:** `v1`
    - Nhấn **Create resource**
-  ![API\_14](/images/5-Workshop/3.api-gateway/3.2/api_14.png)
+![API\_14](/images/5-Workshop/3.api-gateway/3.2/api_14.png)
 4. Trong cấu hình resource:
    - Tick **Proxy resource**
    - **Resource path:** /api/  

@@ -14,7 +14,7 @@ In this step, you will verify that the data from the CSV file has been successfu
 1. **Upload the CSV File to the Bucket**
 
 {{% notice info %}}
-Download the sample CSV file from [here](/files/database01.zip).
+Download the sample CSV file from [here](/files/database02.zip).
 {{% /notice %}}
 
 * In the newly created Bucket:

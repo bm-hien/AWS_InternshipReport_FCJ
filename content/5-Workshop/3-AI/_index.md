@@ -13,5 +13,5 @@ The system utilizes the following AWS services:
 * **Amazon Bedrock:** Provides AI models (LLMs).
     * *Generation Model:* **Amazon Nova Lite** (`anthropic.claude-3-haiku-20240307-v1:0`) for answering questions.
     * *Embedding Model:* **Cohere Embed Multilingual** (`cohere.embed-multilingual-v3`) for data vectorization.
-* **Amazon RDS (PostgreSQL):** Stores product data and vectors (using the `pgvector` extension).
+* **Amazon RDS (PostgreSQL):** Stores product data and vectors (using the `Dbeaver` extension).
 * **AWS Lambda:** Intermediate logic processing function (Serverless backend).
