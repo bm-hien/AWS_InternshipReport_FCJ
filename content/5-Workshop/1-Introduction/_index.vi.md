@@ -44,7 +44,6 @@ Nền tảng Flyora sử dụng kiến trúc serverless hoàn toàn:
 - Hỗ trợ khách hàng theo thời gian thực
 
 **Bảo mật & Xác thực:**
-- **Amazon Cognito** cho xác thực người dùng
 - **IAM roles** cho truy cập dịch vụ an toàn
 
 ### Cấu trúc Workshop

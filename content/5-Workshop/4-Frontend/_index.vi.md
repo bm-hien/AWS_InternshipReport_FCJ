@@ -13,6 +13,6 @@ Hoạt động này là sự kết hợp giữa  **hosting frontend** và **tíc
 **Amazon CloudFront** – Phân phối website của bạn trên toàn cầu với HTTPS và độ trễ thấp.  
 **Amazon API Gateway** – Cung cấp các endpoint API backend mà frontend của bạn có thể gọi.  
 
-Workshop này minh họa cách kết nối một website tĩnh với backend API thông qua API Gateway, tạo nên một complete **kiến trúc web serverless** cho phép tương tác dữ liệu thời gian thực giữa frontend và backend.
+Workshop này minh họa cách kết nối một website tĩnh với backend API thông qua API Gateway, tạo nên một  **kiến trúc web serverless** cho phép tương tác dữ liệu thời gian thực giữa frontend và backend.
 
 

@@ -44,7 +44,6 @@ The Flyora platform uses a fully serverless architecture:
 - Provides real-time customer assistance
 
 **Security & Authentication:**
-- **Amazon Cognito** for user authentication
 - **IAM roles** for secure service access
 
 ### Workshop Structure
