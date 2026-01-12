@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/AWS_InternshipReport_FCJ/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=AWS_InternshipReport_FCJ/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="http://localhost:1313/AWS_InternshipReport_FCJ/images/favicon.png" type="image/png">
+
+    <title>3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking :: AWS System Manager</title>
+
+    
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/nucleus.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/fontawesome-all.min.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/hybrid.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/featherlight.min.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/perfect-scrollbar.min.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/auto-complete.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/atom-one-dark-reasonable.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/theme.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/hugo-theme.css?1762707569" rel="stylesheet">
+    
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/theme-workshop.css?1762707569" rel="stylesheet">
+    
+    
+
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/jquery-3.3.1.min.js?1762707569"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/_index.vie/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://localhost:1313/AWS_InternshipReport_FCJ/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="http://localhost:1313/AWS_InternshipReport_FCJ/js/lunr.min.js?1762707569"></script>
+<script type="text/javascript" src="http://localhost:1313/AWS_InternshipReport_FCJ/js/auto-complete.js?1762707569"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/AWS_InternshipReport_FCJ\/";
+    
+</script>
+<script type="text/javascript" src="http://localhost:1313/AWS_InternshipReport_FCJ/js/search.js?1762707569"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/" title="1.Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/">
+          1.Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week9/" title="Week 9" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week9/">
+           <b> 1.9. </b> Week 9
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week7/" title="Week 7" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week7/">
+          Week 7
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week1/" title="Week 1: Foundations" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week1/">
+          Week 1: Foundations
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week8/" title="Week 8" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week8/">
+          Week 8
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week2/" title="Week 2: Compute Services" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week2/">
+          Week 2: Compute Services
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week3/" title="Week 3: Storage &amp; Databases" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week3/">
+          Week 3: Storage &amp; Databases
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week4/" title="Week 4: Networking &amp; Security" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week4/">
+          Week 4: Networking &amp; Security
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week5/" title="Week 5: Monitoring &amp; Management" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week5/">
+          Week 5: Monitoring &amp; Management
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week6/" title="Week 6: Advanced Topics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week6/">
+          Week 6: Advanced Topics
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2.-proposal/" title="2. Proposal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/2.-proposal/">
+          2. Proposal
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/" title="3. Translated Blogs" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/">
+          3. Translated Blogs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/_index.vie/" title="3. Bài Viết Dịch Thuật" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/_index.vie/">
+        3. Bài Viết Dịch Thuật
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/blog1/" title="3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/">
+          3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/blog1/_index.vie/" title="3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/_index.vie/">
+        3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/blog2/" title="3.2 Humane World for Animals uses AWS to scale global animal welfare programs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/">
+          3.2 Humane World for Animals uses AWS to scale global animal welfare programs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/blog2/_index.vie/" title="3.2 Humane World for Animals uses AWS to scale global animal welfare programs" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/_index.vie/">
+        3.2 Humane World for Animals uses AWS to scale global animal welfare programs
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/blog3/" title="3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/">
+          3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/blog3/_index.vie/" title="3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking" class="dd-item active">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/_index.vie/">
+        3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/" title="5. Events Participated" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/">
+          5. Events Participated
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/event1/" title="Event 1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/event1/">
+          Event 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/event2/" title="Event 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/event2/">
+          Event 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/event3/" title="Event 3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/event3/">
+           <b> 4.3. </b> Event 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/6.-self-ass/" title="6. Self-evaluation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/6.-self-ass/">
+          6. Self-evaluation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/6.-self-ass/_index.vie/" title="" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/6.-self-ass/_index.vie/">
+        
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/7.-sharing-and-feedback/" title="7. Sharing and Feedback" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/7.-sharing-and-feedback/">
+          7. Sharing and Feedback
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/7.-sharing-and-feedback/_index.vie/" title="" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/7.-sharing-and-feedback/_index.vie/">
+        
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+  
+    <section id="prefooter">
+      <hr/>
+      <ul>
+  
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/_index.vie/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>30-01-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+               
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='http://localhost:1313/AWS_InternshipReport_FCJ/'>Internship Report</a> > <a href='http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/'>3. Translated Blogs</a> > <a href='http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/'>3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking</a> > 3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#blog-công-nghệ-lượng-tử-aws">Blog Công nghệ Lượng tử AWS</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking
+            </h1>
+          
+
+        
+
+
+<h2 id="blog-công-nghệ-lượng-tử-aws">Blog Công nghệ Lượng tử <a href="https://aws.amazon.com/blogs/quantum-computing/">AWS</a></h2>
+<hr>
+<p><strong>AWS hợp tác với Công ty Dược phẩm Chugai về các phương pháp lập trình ràng buộc và lấy cảm hứng từ lượng tử cho bài toán kết nối peptide dạng vòng-protein</strong><br>
+<em>Tác giả: Kyle Brubaker, Akihiko Arakawa, Fabian Furrer, Jayeeta Ghosh, Helmut Katzgraber, và Kyle Booth — ngày 24 tháng 9 năm 2025 tại Amazon Quantum Solutions Lab, Quantum Technologies</em></p>
+<p><em>Liên kết gốc: <a href="https://aws.amazon.com/blogs/quantum-computing/aws-collaborates-with-chugai-pharmaceutical-co-on-quantum-inspired-and-constraint-programming-methods-for-cyclic-peptide-protein-docking/">https://aws.amazon.com/blogs/quantum-computing/aws-collaborates-with-chugai-pharmaceutical-co-on-quantum-inspired-and-constraint-programming-methods-for-cyclic-peptide-protein-docking/</a></em></p>
+<p>Khi có mô hình ba chiều của mục tiêu tiềm năng từ thuốc (vị trí gắn kết), đâu là định hướng của phân tử ứng viên thuốc “phù hợp” (đính vào) với vị trí gắn kết đó? Thiết kế thuốc dựa trên cấu trúc bao gồm việc sử dụng các công cụ tính toán chính là để trả lời câu hỏi này!</p>
+<p>Công ty Dược phẩm Chugai Co., Ltd., một công ty dược phẩm hàng đầu của Nhật Bản, chuyên nghiên cứu, phát triển, sản xuất và tiếp thị các loại thuốc kê đơn trong các lĩnh vực ung thư học, miễn dịch/dị ứng, thần kinh học và bệnh thận. Trong nỗ lực thúc đẩy nghiên cứu phân tử thông qua công nghệ điện toán lượng tử, Chugai đã hợp tác với Amazon Web Services (AWS) để khám phá việc ứng dụng các kỹ thuật tính toán phù hợp với lượng tử vào mô phỏng peptide dạng vòng, nhằm tăng tốc quá trình phát hiện thuốc.</p>
+<p>Peptide là chuỗi ngắn các axit amin liên kết với nhau bằng liên kết peptide, thường chứa khoảng 2–50 gốc axit amin. Peptide vòng là loại peptide có cấu trúc vòng khép kín. Mặc dù thuốc peptide vòng có nhiều ưu điểm vượt trội so với các phân tử nhỏ truyền thống [1, 2], việc mô phỏng docking giữa chúng với protein ngoại sinh lại tốn nhiều thời gian và dễ sai sót do số lượng liên kết xoay lớn hơn.</p>
+<p>Trong bài viết này, chúng tôi tóm tắt những nỗ lực của AWS phối hợp với Chugai để xây dựng bài toán docking peptide vòng dưới dạng mô hình tối ưu hóa nhị phân không ràng buộc bậc hai (Quadratic Unconstrained Binary Optimization – QUBO), vốn phù hợp với tính toán lượng tử. Việc mô hình hóa bài toán theo QUBO cho phép áp dụng cả phương pháp tối ưu hóa cổ điển và lượng tử, chẳng hạn như ủ nhiệt cổ điển và lượng tử, để tối ưu hóa vị trí của các hạt peptide. Chúng tôi cũng phát triển một mô hình Lập trình ràng buộc(Constraint Programming - CP) được sử dụng như phương pháp cơ sở. Các phương pháp này được kiểm nghiệm trên các trường hợp ví dụ lấy từ cơ sở dữ liệu Protein (<a href="https://www.rcsb.org/">Protein Data Bank - PDB</a>), và chúng tôi sử dụng khung làm việc đầu-cuối để dự đoán cấu trúc ba chiều của nhiều peptide vòng trong môi trường có protein ngoại sinh. Cả hai phương pháp đều dự đoán được cấu hình thành công, tuy nhiên phương pháp dựa trên QUBO gặp giới hạn về khả năng mở rộng khi vượt quá sáu peptide và 34 gốc protein, trong khi phương pháp CP có thể giải được toàn bộ các trường hợp trong bộ kiểm thử.</p>
+<p>Để biết thêm chi tiết, vui lòng tham khảo bài báo khoa học của chúng tôi được công bố trên <a href="https://www.nature.com/articles/s41598-025-05565-1">Scientific Reports</a>.</p>
+<p><strong>Biểu diễn peptide vòng và protein ngoại sinh</strong><br>
+Để biểu diễn peptide, chúng tôi sử dụng phương pháp biểu diễn “thô” (coarse grained) cho từng axit amin, trong đó các nguyên tử chính và nhánh bên được biểu diễn bằng các hạt đơn lẻ. Chúng tôi sử dụng hai hạt cho tất cả các axit amin ngoại trừ Glycine, vốn không có nhánh bên nên chỉ cần một hạt duy nhất (Hình 1).</p>
+<p><img src="#ZgotmplZ" alt=""></p>
+<p><em>Hình 1 – Ví dụ về biểu diễn thô của Glycine (G) với 1-hạhạt và Lysine (K) hạhạt-hạt. Màu xanh dương được dùng cho chuỗi chính, và màu xanh lá cho chuỗi bên.</em></p>
+<p>Chúng tôi đặt các hạt peptide này lên một mạng lưới tứ diện ba chiều, ví dụ như được minh họa trong Hình 2. Tương tác giữa các gốc amino được tính toán bằng cách sử dụng <a href="https://pubmed.ncbi.nlm.nih.gov/8604144/">thế năng Miyazawa-Jernigan (MJ)</a> [3]. Mục tiêu là tìm cách sắp xếp tối ưu các hạt trên mạng lưới sao cho tổng năng lượng tương tác được giảm thiểu, đồng thời đảm bảo điều kiện vòng hóa và tránh sự chồng lấn giữa các hạt.<img src="#ZgotmplZ" alt=""></p>
+<p><em>Hình 2 – Cách sắp xếp khả thi của peptide vòng P-K-I-D-N-G trên mạng lưới tứ diện, với màu xanh dương biểu thị chuỗi chính và màu xanh lá biểu thị chuỗi bên. Liên kết vòng hóa được tô đỏ. Một số gốc tự do của mạng lưới tứ diện được minh họa bằng màu trắng.</em></p>
+<p>Chúng tôi chỉ xem xét “vị trí hoạt động” của protein mục tiêu – một khu vực tập trung mà peptide có khả năng gắn kết. Điều này giúp giảm không gian bài toán và tăng khả năng tìm được hướng tối ưu của peptide. Để xác định vị trí hoạt động trong protein mục tiêu, chúng tôi xác định các gốc amino nằm trong khoảng cách xác định (trong trường hợp này là 5Å) từ các gốc amino của peptide. Protein ảnh hưởng đến peptide trên lưới theo hai cách: nó chặn một số vị trí quá gần (trong vòng 3.8Å) mà peptide không thể vừa, và nó tạo ra các vùng tương tác (trong vòng 6.5Å) nơi protein và peptide có thể tương tác. Sau khi loại bỏ các vị trí bị chặn, chúng tôi tính toán năng lượng giữa từng phần của peptide và các phần protein gần đó tại các điểm tương tác. Các khoảng cách được chọn cho vị trí hoạt động, vùng bị chặn và vùng tương tác sẽ ảnh hưởng đến lời giải mà hệ thống tìm được.</p>
+<p><strong>Mô hình QUBO</strong></p>
+<p>Chúng tôi nghiên cứu việc mô hình hóa và giải bài toán này bằng phương pháp tối ưu hóa nhị phân không ràng buộc bậc hai (QUBO), phù hợp với tính chất lượng tử. QUBO là một bài toán tối ưu tổ hợp nhằm mục tiêu giảm thiểu một hàm bậc hai với các biến nhị phân (0 hoặc 1). Trong công trình này, chúng tôi bắt đầu bằng cách biểu diễn bài toán dưới dạng tối ưu hóa nhị phân bậc cao, sau đó sử dụng kỹ thuật giảm tính cục bộ để chuyển đổi sang dạng QUBO.</p>
+<p>Nhiều biểu thức Hamilton cho bài toán gấp nếp protein không đính nối (docking) đã được giới thiệu và phân tích với các chiến lược mã hóa khác nhau. Công trình ban đầu của Perdomo et al. [4] sử dụng mã hóa không gian để ánh xạ vị trí protein lên lưới 2D. Sau đó, các nhà nghiên cứu phát triển phương pháp mã hóa theo lượt (turn encoding) [5], mô tả hình dạng protein thông qua chuỗi các bước, giúp hiệu quả hơn với các protein dài. Nhiều nhóm đã cải tiến phương pháp này: Babbush et al. [5] tạo ra phương pháp “turn ancilla”, trong khi các nhóm khác điều chỉnh nó cho các loại lưới không gian khác nhau và phương pháp tính toán lượng tử.</p>
+<p>Mô hình của chúng tôi là phần mở rộng của phương pháp “tiết kiệm tài nguyên” mã hóa theo lượt  [6]. Mô hình ban đầu bao gồm các tương tác giữa các peptide, ràng buộc không chồng lấn giữa các hạt không liên tiếp, và ràng buộc không quay lại để ngăn các hạt liên tiếp chồng lấn. Do đó, biểu thức Hamilton gồm hai phần: Hcomb, xử lý tương tác giữa các peptide và lỗi không chồng lấn; và Hback, đảm bảo các hạt liên tiếp không quay lại cùng một điểm lưới. Để mở rộng mô hình này nhằm tích hợp protein bên ngoài trong peptide vòng, chúng tôi thêm hai thành phần: Hcycle  để áp đặt điều kiện vòng hóa peptide, và Hprotein để xử lý tương tác peptide–protein và va chạm lập thể.</p>
+<p>Thành phần Hcycle  đảm bảo vòng hóa giữa các cặp gốc amino cụ thể bằng cách yêu cầu chúng là hàng xóm gần nhất (1-NN) trên lưới, sử dụng hàm khoảng cách <em>d(x, y)</em> để tính số bước lưới giữa các đỉnh. Với tương tác peptide–protein, Hprotein bao gồm năng lượng tương tác MJ cho các gốc peptide nằm trong vùng tương tác của protein và phạt cho các vị trí bị chặn do va chạm lập thể.</p>
+<p>Biểu thức cuối cùng kết hợp tất cả các thành phần, mở rộng mô hình ban đầu để bao gồm các yếu tố vòng hóa và tương tác với protein:</p>
+<p><em>H = Hcomb  + Hback + Hcycle  + Hprotein</em></p>
+<p>- Hcomb : Kết hợp năng lượng tương tác giữa các peptide với các hình phạt chồng lấn</p>
+<p>- Hback : Áp đặt ràng buộc không quay lại cho các hạt liên tiếp</p>
+<p>- Hcycle : Thực thi ràng buộc vòng hóa</p>
+<p>- Hprotein : Xử lý tương tác peptide–protein và va chạm lập thể</p>
+<p>Here’s a Vietnamese translation of your passage on the Constraint Programming (CP) model and evaluation pipeline:</p>
+<p><strong>Mô hình Lập trình Ràng buộc (CP)</strong></p>
+<p>Làm cơ sở ban đầu, chúng tôi xây dựng một mô hình Lập trình Ràng buộc (Constraint Programming – CP) cho bài toán. CP là một phương pháp giải bài toán thỏa mãn ràng buộc và tối ưu hóa, bao gồm cả mô hình bài toán và bộ giải dựa trên tìm kiếm quay lui (backtracking). Thông thường, người dùng mô tả bài toán bằng các biến và ràng buộc cụ thể, sau đó quá trình tìm kiếm sẽ thử các khả năng khác nhau để tìm ra lời giải. Thuật ngữ “lập trình” ở đây mang nghĩa là “lập kế hoạch” chứ không phải “viết mã”.</p>
+<p>Các ràng buộc chính trong mô hình CP:</p>
+<p>- Đặt các gốc amino tại các điểm lưới hợp lệ, loại trừ các vị trí bị ảnh hưởng bởi va chạm lập thể từ protein bên ngoài</p>
+<p>- Duy trì khoảng cách chính xác giữa các gốc amino có liên kết</p>
+<p>- Ngăn chặn sự chồng lấn giữa các gốc amino</p>
+<p>- Áp đặt liên kết vòng hóa giữa các gốc amino</p>
+<p>Hàm mục tiêu của mô hình là giảm thiểu tổng năng lượng tương tác MJ giữa các hạt liền kề. Mô hình CP được thiết kế để tối ưu hóa năng lượng tương tác giữa các gốc amino trên lưới, đồng thời tuân thủ các ràng buộc không gian khác nhau. CP có khả năng xử lý linh hoạt các ràng buộc logic và mối quan hệ phi tuyến, điều mà các mô hình lập trình tuyến tính khó thực hiện. Mô hình đảm bảo các gốc amino được đặt đúng vị trí trên lưới, tránh chồng lấn, và xem xét các tương tác trong phạm vi cho phép.</p>
+<p><strong>Kết quả</strong></p>
+<p>Để đánh giá các phương pháp, chúng tôi xây dựng một quy trình xử lý toàn diện cho phức hợp protein–peptide từ cơ sở dữ liệu Protein Data Bank (PDB) nhằm dự đoán cấu trúc ba chiều tối ưu của peptide đã gắn kết. Kho dữ liệu PDB chứa tọa độ nguyên tử chi tiết và chuẩn hóa cho các phức hợp protein vòng. Quy trình gồm các bước sau, như minh họa trong Hình 3:</p>
+<p>- Tách tệp PDB thành hai phần: peptide và protein mục tiêu</p>
+<p>- Xác định vị trí hoạt động của protein – khu vực tập trung nơi peptide có khả năng gắn kết</p>
+<p>- Phân loại từng nguyên tử trong peptide thành chuỗi chính hoặc chuỗi bên, sau đó tính trọng tâm có trọng số của mỗi nhóm, tạo ra biểu diễn 2 hạt cho mỗi amino acid</p>
+<p>- Tạo mạng lưới tứ diện để rời rạc hóa không gian tìm kiếm cho các phương pháp tối ưu hóa rời rạc</p>
+<p>- Lọc mạng lưới dựa trên tọa độ vị trí hoạt động và bán kính va chạm lập thể để loại bỏ các đỉnh gây va chạm, tạo ra cấu trúc lưới cuối cùng</p>
+<p><img src="#ZgotmplZ" alt=""></p>
+<p><em>Hình 3 – Chuyển đổi từ biểu diễn nguyên tử sang biểu diễn thô 2 hạt trên mạng lưới tứ diện</em></p>
+<p>PDB đóng vai trò là dữ liệu chuẩn để so sánh với dự đoán của mô hình. Tuy nhiên, mạng lưới tứ diện có một số hạn chế: peptide thực tế không bị cố định vào cấu trúc cứng nhắc, mà hình dạng của chúng được xác định bởi các lực tự nhiên. Do đó, việc so sánh giữa cấu trúc dự đoán và cấu trúc thực tế từ PDB là không dễ dàng. Dù vậy, chúng tôi đánh giá lời giải của mô hình dựa trên hai tiêu chí: giá trị năng lượng tương tác MJ và khoảng cách trung bình bình phương gốc (RMSD) so với tọa độ peptide thực tế (từ tệp PDB) trong không gian Euclid. RMSD đo khoảng cách trung bình giữa các hạt thô của peptide thực và peptide do mô hình tạo ra. Bất kỳ giá trị RMSD nào vượt quá 4Å đều được xem là không đủ chính xác để sử dụng thực tế.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Mã PDB</th>
+          <th style="text-align: center">Chuỗi Peptide</th>
+          <th style="text-align: center">Số lượng gốc amino</th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><strong>Peptide</strong></td>
+          <td style="text-align: center"><strong>Protein ngoài</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3WNE</td>
+          <td style="text-align: center">P-K-I-D-N-G</td>
+          <td style="text-align: center">6</td>
+          <td style="text-align: center">26</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">5LSO</td>
+          <td style="text-align: center">K-S-R-W-D-E</td>
+          <td style="text-align: center">6</td>
+          <td style="text-align: center">34</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3AV9</td>
+          <td style="text-align: center">S-A-K-I-D-N-L-D</td>
+          <td style="text-align: center">8</td>
+          <td style="text-align: center">28</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3AVI</td>
+          <td style="text-align: center">S-L-K-I-D-N-M-D</td>
+          <td style="text-align: center">8</td>
+          <td style="text-align: center">32</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">3AVN</td>
+          <td style="text-align: center">S-H-K-I-D-N-L-D</td>
+          <td style="text-align: center">8</td>
+          <td style="text-align: center">28</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">2F58</td>
+          <td style="text-align: center">H-I-G-P-G-R-A-F-G-G-G</td>
+          <td style="text-align: center">11</td>
+          <td style="text-align: center">49</td>
+      </tr>
+  </tbody>
+</table>
+<p><em>Bảng 1: Các phức hợp peptide–protein từ cơ sở dữ liệu RCSB Protein Databank (<a href="https://www.rcsb.org/">https://www.rcsb.org/</a> ) được sử dụng cho phân tích thực nghiệm của chúng tôi.</em></p>
+<p>Chúng tôi đã phân tích sáu phức hợp peptide–protein từ PDB, với số lượng gốc amino trong peptide từ 6 đến 11 và số lượng gốc amino trong vị trí hoạt động của protein từ 26 đến 49, như thể hiện trong Bảng 1. Đối với mô hình QUBO, chúng tôi áp dụng phương pháp làm nguội mô phỏng (simulated annealing) – một thuật toán heuristic, được triển khai trong một framework lai mã nguồn mở Python. Việc tối ưu các siêu tham số được thực hiện bằng tối ưu hóa Bayes thông qua Amazon SageMaker. Mô hình CP được triển khai bằng thư viện OR-Tools và được giải tối ưu trong giới hạn thời gian 300 giây trên các máy ảo Amazon EC2 m5.4xlarge.</p>
+<table>
+  <thead>
+      <tr>
+          <th>PDB ID</th>
+          <th style="text-align: center">Without External Protein</th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center">With External Protein</th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+          <th style="text-align: center"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td></td>
+          <td style="text-align: center"><strong>MJ potential</strong></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><strong>RMSD (Å)</strong></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><strong>MJ potential</strong></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"><strong>RMSD (Å)</strong></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
+          <td></td>
+          <td style="text-align: center"><strong>QUBO</strong></td>
+          <td style="text-align: center"><strong>CP</strong></td>
+          <td style="text-align: center"><strong>QUBO</strong></td>
+          <td style="text-align: center"><strong>CP</strong></td>
+          <td style="text-align: center"><strong>QUBO</strong></td>
+          <td style="text-align: center"><strong>CP</strong></td>
+          <td style="text-align: center"><strong>QUBO</strong></td>
+          <td style="text-align: center"><strong>CP</strong></td>
+      </tr>
+      <tr>
+          <td>3WNE</td>
+          <td style="text-align: center">-1.87</td>
+          <td style="text-align: center">-1.87</td>
+          <td style="text-align: center">10.03</td>
+          <td style="text-align: center">7.77</td>
+          <td style="text-align: center">-28.53</td>
+          <td style="text-align: center">-42.64</td>
+          <td style="text-align: center">8.88</td>
+          <td style="text-align: center">8.48</td>
+      </tr>
+      <tr>
+          <td>5LSO</td>
+          <td style="text-align: center">-5.93</td>
+          <td style="text-align: center">-5.97</td>
+          <td style="text-align: center">13.31</td>
+          <td style="text-align: center">13.20</td>
+          <td style="text-align: center">-17.93</td>
+          <td style="text-align: center">-23.26</td>
+          <td style="text-align: center">7.68</td>
+          <td style="text-align: center">10.29</td>
+      </tr>
+      <tr>
+          <td>3AV9</td>
+          <td style="text-align: center">-6.18</td>
+          <td style="text-align: center">-6.64</td>
+          <td style="text-align: center">11.36</td>
+          <td style="text-align: center">9.92</td>
+          <td style="text-align: center">–</td>
+          <td style="text-align: center">-40.44</td>
+          <td style="text-align: center">–</td>
+          <td style="text-align: center">8.98</td>
+      </tr>
+      <tr>
+          <td>3AVI</td>
+          <td style="text-align: center">-7.43</td>
+          <td style="text-align: center">-8.34</td>
+          <td style="text-align: center">9.65</td>
+          <td style="text-align: center">9.39</td>
+          <td style="text-align: center">–</td>
+          <td style="text-align: center">-62.34</td>
+          <td style="text-align: center">–</td>
+          <td style="text-align: center">8.74</td>
+      </tr>
+      <tr>
+          <td>3AVN</td>
+          <td style="text-align: center">-6.52</td>
+          <td style="text-align: center">-6.88</td>
+          <td style="text-align: center">10.60</td>
+          <td style="text-align: center">10.75</td>
+          <td style="text-align: center">–</td>
+          <td style="text-align: center">-55.12</td>
+          <td style="text-align: center">–</td>
+          <td style="text-align: center">8.34</td>
+      </tr>
+      <tr>
+          <td>2F58</td>
+          <td style="text-align: center">-6.18</td>
+          <td style="text-align: center">-13.61</td>
+          <td style="text-align: center">11.52</td>
+          <td style="text-align: center">11.39</td>
+          <td style="text-align: center">–</td>
+          <td style="text-align: center">-4.02</td>
+          <td style="text-align: center">–</td>
+          <td style="text-align: center">10.42</td>
+      </tr>
+  </tbody>
+</table>
+<p><em>Bảng 2: So sánh các giá trị năng lượng tương tác MJ và RMSD cho phương pháp QUBO và CP, với và không có protein bên ngoài.</em></p>
+<p>Bảng 2 đối chiếu các chỉ số hiệu năng (năng lượng tương tác MJ và RMSD) giữa hai phương pháp QUBO và CP đối với từng peptide, có và không có protein bên ngoài, do chưa có chuẩn đối chứng từ các nghiên cứu trước để so sánh kết quả của chúng tôi.</p>
+<p>Phương pháp QUBO đã tìm được các lời giải khả thi cho bài toán với peptide chứa tối đa 6 gốc amino và protein mục tiêu 34 gốc amino. Lời giải khả thi là cấu hình thỏa mãn tất cả ràng buộc của bài toán nhưng có thể chưa tối ưu về năng lượng tương tác MJ. Tuy nhiên, với các trường hợp lớn hơn, QUBO thường gặp khó khăn và tạo ra lời giải vi phạm ràng buộc, do trong mô hình QUBO các ràng buộc phải được đưa vào hàm mục tiêu dưới dạng các hàm phạt. Khi không có protein bên ngoài, QUBO giải thành công tất cả các trường hợp thử nghiệm, đạt điểm năng lượng thấp nhất trong 5/6 trường hợp, ngoại trừ phức hợp 2F58 có kết quả kém hơn so với CP. Cả hai phương pháp đều cho độ chính xác tương đương (theo RMSD) trong việc khớp cấu trúc thực tế. Tuy nhiên, khi có protein, QUBO chỉ thành công với 2/5 peptide (3WNE và 5LSO), và đạt điểm năng lượng cao hơn CP trong cả hai trường hợp. Đáng chú ý, QUBO thể hiện độ chính xác cao hơn so với CP ở peptide 5LSO dựa trên RMSD.</p>
+<p>Hình 3 minh họa cách cả hai phương pháp QUBO và CP đều mô hình thành công peptide 5LSO trong sự hiện diện của protein, tạo ra các cấu trúc hợp lệ so với cấu trúc thực tế trong cơ sở dữ liệu protein. Điều này cho thấy tối ưu hóa điểm năng lượng không phải lúc nào cũng dẫn đến dự đoán cấu trúc chính xác hơn, đặc biệt khi bắt đầu từ vị trí chưa tối ưu trên mô hình lưới tứ diện.</p>
+<p>Phương pháp CP cho thấy khả năng mở rộng, giải quyết các bài toán với đến 11 gốc amino peptide và 49 gốc amino protein mục tiêu một cách tối ưu.<img src="#ZgotmplZ" alt=""></p>
+<p><em>Hình 4: Hình ảnh kết quả của peptide 5LSO. So sánh peptide thật trong PDB (bên trái) với kết quả mô hình QUBO (ở giữa) và kết quả CP-MJ 1-NN (bên phải). Peptide được biểu diễn bằng các điểm xanh dương và xanh lá (tương ứng chuỗi chính và chuỗi bên), còn các điểm đỏ biểu thị các gốc amino của protein bên ngoài.</em></p>
+<p><strong>Kết luận</strong></p>
+<p>Trong bài viết này, chúng tôi đã giới thiệu một mô hình nhị phân phù hợp với tính chất lượng tử cho bài toán gắn kết peptide vòng. Hai phương pháp QUBO và CP được so sánh trên một tập hợp các trường hợp peptide, trong đó QUBO tìm được các lời giải khả thi cho các bài toán nhỏ (tối đa 6 gốc amino peptide và 34 gốc amino protein) với năng lượng tương tác MJ cạnh tranh, trong khi CP thể hiện khả năng mở rộng tốt hơn bằng cách giải tối ưu các bài toán lớn hơn (tối đa 11 gốc amino peptide và 49 gốc amino protein), như minh họa trong trường hợp peptide 5LSO.</p>
+<p>Phương pháp QUBO hoạt động hiệu quả trong môi trường không có protein, gần như tương đương với CP về chất lượng lời giải. Tuy nhiên, QUBO gặp khó khăn trong việc đảm bảo tính khả thi khi có mặt protein, cùng với thách thức nội tại trong việc biểu diễn các tương tác phụ thuộc khoảng cách trong mô hình, cho thấy rằng các kỹ thuật tối ưu hóa lượng tử dựa trên QUBO có thể không phải là hướng đi phù hợp nhất cho ứng dụng cụ thể này. Dù còn hạn chế, đặc biệt về khả năng mở rộng, phương pháp QUBO vẫn là nền tảng tiềm năng cho các nghiên cứu trong tương lai khi thuật toán và phần cứng lượng tử tiếp tục phát triển.</p>
+<p>Hiệu năng của phương pháp CP cũng cho thấy sự phù hợp lâu dài của các phương pháp tối ưu hóa truyền thống trong sinh học tính toán. Khi lĩnh vực này tiến triển, các phương pháp lai kết hợp giữa kỹ thuật lượng tử và cổ điển có thể sẽ là lựa chọn hiệu quả nhất để giải quyết các bài toán mô hình hóa phân tử sinh học phức tạp. Nhìn về phía trước, hiệu suất mạnh mẽ và khả năng mở rộng của phương pháp CP khiến nó trở thành hướng phát triển đầy hứa hẹn trong nghiên cứu tương tác peptide–protein. Những phát hiện này không chỉ đóng góp vào hiểu biết về mô hình hóa protein bằng tính toán mà còn cung cấp định hướng hữu ích cho các nhà nghiên cứu trong việc lựa chọn phương pháp phù hợp cho các bài toán tối ưu hóa sinh học tương tự.</p>
+<p>Việc sử dụng cấu trúc lưới để mô hình hóa gắn kết peptide vòng, dù giúp đơn giản hóa bài toán, lại mang đến những hạn chế cố hữu vì peptide thực tế không bị ràng buộc vào cấu trúc cứng nhắc mà tuân theo các lực lập thể tự nhiên. Sự đơn giản hóa này góp phần tạo ra các giá trị RMSD (độ lệch bình phương trung bình) đáng kể khi so sánh kết quả mô hình với cấu trúc thực tế từ cơ sở dữ liệu PDB (Protein Data Bank).</p>
+<p>Đối với những ai quan tâm đến thiết kế thuốc peptide hoặc sinh học cấu trúc tính toán, nghiên cứu này mang lại những góc nhìn giá trị về các phương pháp thuật toán hiện tại và những đánh đổi đi kèm. Nó cũng nhấn mạnh tầm quan trọng của việc tiếp tục nghiên cứu để thu hẹp khoảng cách giữa mô hình tính toán đơn giản và thực tế phức tạp của các tương tác phân tử sinh học. Bạn có thể đọc bài báo của chúng tôi trên <a href="https://www.nature.com/articles/s41598-025-05565-1">Scientific Reports</a> để tìm hiểu chi tiết hơn về phương pháp, cách triển khai và quy trình tổng thể. Nếu cần hỗ trợ với các thách thức tương tự, hãy liên hệ với AWS để biết cách <a href="https://aws.amazon.com/professional-services/">AWS Professional Services</a> và <a href="https://aws.amazon.com/quantum-solutions-lab/">Amazon Quantum Solutions Lab</a> có thể hỗ trợ bạn.</p>
+<p>Dưới đây là bản dịch tiếng Việt của danh sách tài liệu tham khảo bạn cung cấp:</p>
+<p><strong>Tham khảo</strong></p>
+<p>[1] L. Wang, N. Wang, W. Zhang, X. Cheng, Z. Yan, G. Shao, X. Wang, R. Wang, C. Fu, “Peptide trị liệu: ứng dụng hiện tại và định hướng tương lai”. Trong Signal Transduction and Targeted Therapy, tập 7 (số 1), năm 2022.</p>
+<p>[2] A. Ohta và cộng sự, “Xác thực phương pháp mới để tạo thuốc uống vượt qua Quy tắc 5 cho các mục tiêu nội bào khó tiếp cận”. Journal of the American Chemical Society, tập 145 (số 44), năm 2023.</p>
+<p>[3] S. Miyazawa, R. Jernigan, “Ước lượng năng lượng tiếp xúc hiệu quả giữa các gốc amino từ cấu trúc tinh thể protein: phương pháp gần đúng hóa học”, Macromolecules, tập 18 (số 3), năm 1985.</p>
+<p>[4] A. Perdomo, C. Truncik, I. Tubert-Brohman, G. Rose, A. Aspuru-Guzik, “Xây dựng Hamiltonian mô hình cho tính toán lượng tử adiabatic và ứng dụng trong tìm cấu hình năng lượng thấp của mô hình protein trên lưới”, Physical Review A, tập 78, mã bài 012320.</p>
+<p>[5] R. Babbush, A. Perdomo-Ortiz, B. O’Gorman, W. Macready, A. Aspuru-Guzik, “Xây dựng hàm năng lượng cho mô hình dị polymer trên lưới: mã hóa hiệu quả cho lập trình thỏa mãn ràng buộc và làm nguội lượng tử”, Advances in Chemical Physics, John Wiley &amp; Sons, Inc., 2014, trang 201–244.</p>
+<p>[6] A. Robert, P. K. Barkoutsos, S. Woerner, I. Tavernelli, “Thuật toán lượng tử tiết kiệm tài nguyên cho gấp nếp protein”, npj Quantum Information, tập 7, bài số 38.</p>
+<p>TAGS: <a href="https://aws.amazon.com/blogs/quantum-computing/tag/amazon-quantum-solutions-lab/">Amazon Quantum Solutions Lab</a>, <a href="https://aws.amazon.com/blogs/quantum-computing/tag/quantum-algorithms/">quantum algorithms</a>, <a href="https://aws.amazon.com/blogs/quantum-computing/tag/quantum-computing/">quantum computing</a>, <a href="https://aws.amazon.com/blogs/quantum-computing/tag/quantum-technologies/">Quantum Technologies</a></p>
+<p><strong>Kyle Brubaker</strong></p>
+<p>Kyle Brubaker là Nhà khoa học ứng dụng cấp cao tại Phòng thí nghiệm Giải pháp Nâng cao (Advanced Solutions Lab) của AWS. Anh nhận bằng Thạc sĩ Kỹ thuật Y sinh tại Đại học New York (NYU), chuyên về giao diện não–máy. Kyle có nền tảng công nghiệp trong lĩnh vực học máy và kỹ thuật học máy, và gần đây đã chuyển sang nghiên cứu về điện toán lượng tử, tối ưu hóa, và các giải pháp học máy lai.</p>
+<p><strong>Akihiko Arakawa</strong></p>
+<p>Akihiko Arakawa là nhà khoa học dữ liệu tại Công ty Dược phẩm Chugai. Ông chuyên về hóa học tính toán trong nghiên cứu phát triển thuốc phân tử nhỏ và trung bình. Ngoài ra, ông đang dẫn đầu một nhóm nghiên cứu ứng dụng điện toán lượng tử vào quá trình phát triển thuốc. Akihiko nhận bằng Tiến sĩ ngành sinh học cấu trúc từ Đại học Tokyo.</p>
+<p><strong>Fabian Furrer</strong></p>
+<p>Fabian Furrer là Nhà nghiên cứu cấp cao tại Phòng thí nghiệm Giải pháp Nâng cao của AWS. Fabian đam mê hỗ trợ khách hàng tối ưu hóa hoạt động kinh doanh bằng các kỹ thuật tối ưu hóa cổ điển và lượng tử. Anh có bằng Tiến sĩ về lý thuyết thông tin lượng tử từ Đại học Leibniz Hanover, và từng là nghiên cứu sinh sau tiến sĩ tại Đại học Tokyo và Phòng thí nghiệm Nghiên cứu Cơ bản NTT ở Nhật Bản. Fabian cũng có nhiều năm kinh nghiệm trong ngành công nghiệp với vai trò quản lý rủi ro định lượng trong lĩnh vực kinh tế năng lượng tại một công ty tiện ích.</p>
+<p><strong>Jayeeta Ghosh</strong></p>
+<p>Là Nhà khoa học dữ liệu cấp cao tại AWS Professional Services, Jayeeta Ghosh hợp tác với khách hàng để giải quyết các thách thức kinh doanh phức tạp trong nhiều lĩnh vực kỹ thuật và công nghiệp. Cô có bằng Tiến sĩ và Thạc sĩ ngành Kỹ thuật Hóa học từ UC Davis, sau đó thực hiện nghiên cứu sau tiến sĩ tại Đại học Rutgers và Đại học Illinois, Urbana-Champaign. Trước khi chuyển sang vai trò tư vấn khoa học dữ liệu tại Trace3 và QuaEra, cô từng là Nhà khoa học cấp cao tại Simulations Plus, nơi cô phát triển các mô hình học máy và mạng nơ-ron nhân tạo (ML/ANN) để sàng lọc ứng viên thuốc bằng Cheminformatics.</p>
+<p><strong>Helmut Katzgraber</strong></p>
+<p>Tiến sĩ Helmut Katzgraber nhận bằng cử nhân vật lý từ ETH Zurich, và bằng Thạc sĩ cùng Tiến sĩ vật lý tại Đại học California Santa Cruz. Sau các vị trí nghiên cứu sau tiến sĩ tại Đại học California Davis và ETH Zurich, ông được trao học bổng giáo sư từ Quỹ Khoa học Quốc gia Thụy Sĩ. Năm 2009, ông gia nhập Đại học Texas A&amp;M với vai trò trợ lý giáo sư và trở thành giáo sư chính thức vào năm 2015. Katzgraber gia nhập Microsoft năm 2018 với vai trò quản lý nghiên cứu cấp cao, trước khi chuyển sang Amazon năm 2020. Ông được bầu làm Hội viên của Hội Vật lý Hoa Kỳ năm 2021 và hiện đang lãnh đạo Phòng thí nghiệm Giải pháp Nâng cao tại AWS.</p>
+<p><strong>Kyle Booth</strong></p>
+<p>Kyle Booth là Nhà khoa học ứng dụng cấp cao tại Phòng thí nghiệm Giải pháp Nâng cao của AWS. Anh nhận bằng Tiến sĩ ngành Nghiên cứu Vận hành (Operations Research) từ Đại học Toronto. Nghiên cứu của anh tập trung vào lập trình ràng buộc và lập trình nguyên nhằm giải quyết các bài toán tối ưu hóa tổ hợp. Trước khi gia nhập AWS, anh từng là nhà khoa học tại Trung tâm Nghiên cứu NASA Ames.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/" title="3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="http://localhost:1313/AWS_InternshipReport_FCJ/events/" title="5. Events Participated" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/clipboard.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/perfect-scrollbar.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/perfect-scrollbar.jquery.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/jquery.sticky.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/featherlight.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/highlight.pack.js?1762707569"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/modernizr.custom-3.6.0.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/learn.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/hugo-learn.js?1762707569"></script>
+
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/mermaid/mermaid.css?1762707569" rel="stylesheet" />
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/mermaid/mermaid.js?1762707569"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
+

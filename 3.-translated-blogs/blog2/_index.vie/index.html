@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/AWS_InternshipReport_FCJ/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=AWS_InternshipReport_FCJ/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="http://localhost:1313/AWS_InternshipReport_FCJ/images/favicon.png" type="image/png">
+
+    <title>3.2 Humane World for Animals uses AWS to scale global animal welfare programs :: AWS System Manager</title>
+
+    
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/nucleus.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/fontawesome-all.min.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/hybrid.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/featherlight.min.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/perfect-scrollbar.min.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/auto-complete.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/atom-one-dark-reasonable.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/theme.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/hugo-theme.css?1762707569" rel="stylesheet">
+    
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/theme-workshop.css?1762707569" rel="stylesheet">
+    
+    
+
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/jquery-3.3.1.min.js?1762707569"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/_index.vie/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://localhost:1313/AWS_InternshipReport_FCJ/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="http://localhost:1313/AWS_InternshipReport_FCJ/js/lunr.min.js?1762707569"></script>
+<script type="text/javascript" src="http://localhost:1313/AWS_InternshipReport_FCJ/js/auto-complete.js?1762707569"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/AWS_InternshipReport_FCJ\/";
+    
+</script>
+<script type="text/javascript" src="http://localhost:1313/AWS_InternshipReport_FCJ/js/search.js?1762707569"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/" title="1.Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/">
+          1.Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week9/" title="Week 9" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week9/">
+           <b> 1.9. </b> Week 9
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week7/" title="Week 7" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week7/">
+          Week 7
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week1/" title="Week 1: Foundations" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week1/">
+          Week 1: Foundations
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week8/" title="Week 8" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week8/">
+          Week 8
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week2/" title="Week 2: Compute Services" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week2/">
+          Week 2: Compute Services
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week3/" title="Week 3: Storage &amp; Databases" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week3/">
+          Week 3: Storage &amp; Databases
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week4/" title="Week 4: Networking &amp; Security" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week4/">
+          Week 4: Networking &amp; Security
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week5/" title="Week 5: Monitoring &amp; Management" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week5/">
+          Week 5: Monitoring &amp; Management
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week6/" title="Week 6: Advanced Topics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week6/">
+          Week 6: Advanced Topics
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2.-proposal/" title="2. Proposal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/2.-proposal/">
+          2. Proposal
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/" title="3. Translated Blogs" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/">
+          3. Translated Blogs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/_index.vie/" title="3. Bài Viết Dịch Thuật" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/_index.vie/">
+        3. Bài Viết Dịch Thuật
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/blog1/" title="3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/">
+          3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/blog1/_index.vie/" title="3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/_index.vie/">
+        3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/blog2/" title="3.2 Humane World for Animals uses AWS to scale global animal welfare programs" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/">
+          3.2 Humane World for Animals uses AWS to scale global animal welfare programs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/blog2/_index.vie/" title="3.2 Humane World for Animals uses AWS to scale global animal welfare programs" class="dd-item active">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/_index.vie/">
+        3.2 Humane World for Animals uses AWS to scale global animal welfare programs
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/blog3/" title="3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/">
+          3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/blog3/_index.vie/" title="3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/_index.vie/">
+        3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/" title="5. Events Participated" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/">
+          5. Events Participated
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/event1/" title="Event 1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/event1/">
+          Event 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/event2/" title="Event 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/event2/">
+          Event 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/event3/" title="Event 3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/event3/">
+           <b> 4.3. </b> Event 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/6.-self-ass/" title="6. Self-evaluation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/6.-self-ass/">
+          6. Self-evaluation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/6.-self-ass/_index.vie/" title="" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/6.-self-ass/_index.vie/">
+        
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/7.-sharing-and-feedback/" title="7. Sharing and Feedback" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/7.-sharing-and-feedback/">
+          7. Sharing and Feedback
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/7.-sharing-and-feedback/_index.vie/" title="" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/7.-sharing-and-feedback/_index.vie/">
+        
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+  
+    <section id="prefooter">
+      <hr/>
+      <ul>
+  
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/_index.vie/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>30-01-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+               
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='http://localhost:1313/AWS_InternshipReport_FCJ/'>Internship Report</a> > <a href='http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/'>3. Translated Blogs</a> > <a href='http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/'>3.2 Humane World for Animals uses AWS to scale global animal welfare programs</a> > 3.2 Humane World for Animals uses AWS to scale global animal welfare programs
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#humane-world-for-animals-sử-dụng-aws-để-mở-rộng-quy-mô-các-chương-trình-phúc-lợi-động-vật-toàn-cầu"><strong>Humane World for Animals sử dụng AWS để mở rộng quy mô các chương trình phúc lợi động vật toàn cầu</strong></a></li>
+        <li><a href="#thu-thập-dữ-liệu-phân-mảnh-trong-phúc-lợi-động-vật-toàn-cầu"><strong>Thu thập dữ liệu phân mảnh trong phúc lợi động vật toàn cầu</strong></a></li>
+        <li><a href="#xây-dựng-giải-pháp-toàn-diện-trên-aws"><strong>Xây dựng giải pháp toàn diện trên AWS</strong></a></li>
+        <li><a href="#mở-rộng-tác-động-thông-qua-công-nghệ-đám-mây"><strong>Mở rộng tác động thông qua công nghệ đám mây</strong></a></li>
+        <li><a href="#lời-khuyên-cho-việc-triển-khai-công-nghệ-phi-lợi-nhuận"><strong>Lời khuyên cho việc triển khai công nghệ phi lợi nhuận</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              3.2 Humane World for Animals uses AWS to scale global animal welfare programs
+            </h1>
+          
+
+        
+
+
+<h3 id="humane-world-for-animals-sử-dụng-aws-để-mở-rộng-quy-mô-các-chương-trình-phúc-lợi-động-vật-toàn-cầu"><strong>Humane World for Animals sử dụng AWS để mở rộng quy mô các chương trình phúc lợi động vật toàn cầu</strong></h3>
+<p>bởi Stacy Stonich and Jules Marenghi | on 24 SEP 2025 | in <a href="https://aws.amazon.com/blogs/publicsector/category/post-types/customer-solutions/">Customer Solutions</a>, <a href="https://aws.amazon.com/blogs/publicsector/category/public-sector/nonprofit/">Nonprofit</a>, <a href="https://aws.amazon.com/blogs/publicsector/category/public-sector/">Public Sector</a>  | <a href="https://aws.amazon.com/blogs/publicsector/humane-world-for-animals-uses-aws-to-scale-global-animal-welfare-programs/">Permalink</a></p>
+<p>Trong hơn 70 năm qua, <a href="https://www.humaneworld.org/en">Humane World for Animals</a>—trước đây là Humane Society of the United States (Xã hội nhân đạo của nước Mĩ) và Humane Society International (Xã hội nhân đạo quốc tế)—đã là tổ chức tiên phong trong phong trào bảo vệ động vật, giải quyết tận gốc các nguyên nhân gây ra tội ác cho động vật nhằm thúc đẩy sự thay đổi lâu dài và tạo ra một thế giới tốt đẹp hơn cho tất cả các loài động vật trên toàn cầu. Tổ chức đã góp phần xây dựng một thế giới nhân đạo hơn cho động vật, giúp thông qua hàng ngàn đạo luật mang tính bước ngoặt, cứu hộ hàng trăm ngàn cá thể động vật, và chăm sóc, bảo vệ hàng triệu cá thể khác.</p>
+<p>Để giải quyết thách thức toàn cầu trong việc quản lý số lượng động vật sống ngoài đường, Humane World for Animals đã phát triển Humane World Apps—một công cụ quản lý dữ liệu toàn cầu toàn diện được thiết kế nhằm cải thiện các chương trình phúc lợi cho chó và mèo thông qua quản lý hoạt động triệt sản (spay and neuter), tiêm chủng hàng loạt (mass vaccination), và tiếp cận dịch vụ chăm sóc (access to care). Với sự hỗ trợ từ <a href="https://aws.amazon.com/government-education/nonprofits/aws-imagine-grant-program/">AWS Imagine Grant</a>—chương trình tài trợ công cung cấp cả tiền mặt và tín dụng <a href="https://aws.amazon.com/">Amazon Web Services (AWS)</a> cho các tổ chức phi lợi nhuận đã đăng ký sử dụng công nghệ đám mây để thúc đẩy sứ mệnh—Humane World Apps đang thay đổi cách các chương trình phúc lợi động vật quy mô lớn vận hành trên toàn thế giới.</p>
+<p>Trong giai đoạn beta tại Vadodara, Ấn Độ, Humane World Apps đã đạt tỷ lệ triệt sản chó lên đến 86% và số lượng khiếu nại liên quan đến chó giảm 60% sau khi triển khai ứng dụng. Công nghệ này hướng đến việc chấm dứt sự đau khổ của động vật đồng hành bằng cách nâng cao hiệu quả chương trình, hỗ trợ sức khỏe cộng đồng, và thúc đẩy các giải pháp đổi mới bền vững nhằm giảm xung đột giữa người và chó.</p>
+<p>Trong bài viết này, chúng tôi sẽ trình bày cách Humane World Apps đang cách mạng hóa công tác quản lý phúc lợi động vật thông qua công nghệ đám mây và các giải pháp dựa trên dữ liệu.</p>
+<h3 id="thu-thập-dữ-liệu-phân-mảnh-trong-phúc-lợi-động-vật-toàn-cầu"><strong>Thu thập dữ liệu phân mảnh trong phúc lợi động vật toàn cầu</strong></h3>
+<p>Quy mô của thách thức trong việc quản lý số lượng động vật sống ngoài đường là rất lớn. Ước tính có từ 700 triệu đến 1 tỷ con chó trên toàn thế giới, bao gồm cả chó có chủ và không có chủ sống trong các trại cứu hộ, gia đình hoặc tự do trong môi trường đô thị và nông thôn. Theo một <a href="https://www.mars.com/news-and-stories/press-releases-statements/pet-homelessness">nghiên cứu của MARS</a>, có gần 362 triệu chó và mèo sống ngoài đường tại 20 quốc gia. Các cộng đồng và cơ quan chính phủ—đặc biệt ở các quốc gia có nền kinh tế đang phát triển—gặp khó khăn trong việc tìm kiếm các giải pháp hợp lý, nhân đạo và dễ tiếp cận để quản lý số lượng chó mèo, thúc đẩy phúc lợi động vật, và xây dựng sự chung sống hòa bình giữa động vật đồng hành và con người.</p>
+<p>Chính phủ chịu trách nhiệm về sức khỏe và an toàn cộng đồng, nhưng nhiều nơi vẫn thiếu các giải pháp cụ thể và chương trình dựa trên bằng chứng vững chắc. Ngoài ra, nhiều nơi vẫn áp dụng biện pháp tiêu hủy động vật sống ngoài đường. Các giải pháp lâu dài bao gồm triệt sản nhân đạo và hiệu quả, tiêm chủng, và tiếp cận dịch vụ thú y giá cả phải chăng là chìa khóa để cải thiện phúc lợi động vật và giảm xung đột giữa người và động vật đồng hành ở những nơi có vấn đề về động vật hoang.</p>
+<p>Lịch sử cho thấy các chương trình phúc lợi chó mèo quy mô lớn thường gặp khó khăn do quản lý và thu thập dữ liệu kém hiệu quả, phân mảnh. Hệ quả là kết quả không tối ưu trong việc kiểm soát số lượng chó mèo đi lang thang và giải quyết các vấn đề sức khỏe cộng đồng.</p>
+<h3 id="xây-dựng-giải-pháp-toàn-diện-trên-aws"><strong>Xây dựng giải pháp toàn diện trên AWS</strong></h3>
+<p>Mục tiêu của Humane World Apps là cung cấp một nền tảng công nghệ cao thống nhất, tích hợp hệ thống quản lý dữ liệu cho các hoạt động như triệt sản (spay and neuter), tiêm chủng hàng loạt (mass vaccination), và vận hành phòng khám thú y. Ứng dụng bao gồm cả ứng dụng di động và giao diện web, cung cấp các chức năng nâng cao phù hợp với nhu cầu của từng chương trình.</p>
+<p>Ứng dụng di động hướng đến việc hỗ trợ đội ngũ hiện trường thu thập dữ liệu theo thời gian thực và ghi lại vị trí bắt để đảm bảo chó được thả về đúng nơi ban đầu. Hệ thống dự kiến sẽ theo dõi toàn bộ chu kỳ chăm sóc, bao gồm chăm sóc trước và sau phẫu thuật, dữ liệu phẫu thuật, và nhận dạng bằng hình ảnh để giám sát từng cá thể động vật cũng như kết quả của chương trình. Người dùng có thể kỳ vọng ứng dụng sẽ quản lý chương trình tiêm phòng bệnh dại thông qua geo-fencing (khoanh vùng địa lý bằng công nghệ số), định vị GPS, và tính năng báo cáo tự động.</p>
+<p>Vì Humane World for Animals là một tổ chức phi lợi nhuận, phiên bản beta ban đầu của ứng dụng được xây dựng với ngân sách hạn chế. Một số nhà phát triển là tình nguyện viên, và họ đã thiết kế và xây dựng kiến trúc ứng dụng bằng cách sử dụng các dịch vụ miễn phí hoặc chi phí thấp. Với sự hỗ trợ từ AWS Imagine Grant (chương trình tài trợ của Amazon Web Services dành cho tổ chức phi lợi nhuận), tổ chức hiện đang trong quá trình chuyển đổi ứng dụng beta sang các dịch vụ AWS nhằm thống nhất và đơn giản hóa hệ thống công nghệ.</p>
+<p>Hiện tại, ứng dụng được thiết kế sử dụng một máy chủ <a href="https://aws.amazon.com/ec2/">Amazon Elastic Compute Cloud</a> (Amazon EC2 – dịch vụ máy chủ ảo của AWS) duy nhất để lưu trữ cả môi trường sản xuất và thử nghiệm. Ngoài ra, các máy chủ cơ sở dữ liệu cho môi trường sản xuất và thử nghiệm sử dụng <a href="https://aws.amazon.com/rds/">Amazon Relational Database Service</a> (Amazon RDS – dịch vụ cơ sở dữ liệu quan hệ của AWS). Ứng dụng sử dụng <a href="https://aws.amazon.com/s3/">Amazon Simple Storage Service</a> (Amazon S3 – dịch vụ lưu trữ đối tượng của AWS) để lưu trữ hình ảnh động vật. Trong quá trình chuyển đổi, tổ chức đã bắt đầu sử dụng <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service</a> (Amazon SES – dịch vụ gửi email của AWS), và có kế hoạch tận dụng thêm các công cụ AWS khác trong tương lai.</p>
+<p>Để đảm bảo khả năng dự phòng, tổ chức duy trì một instance AWS tại Ohio dùng cho cold standby (dự phòng lạnh – hệ thống sao lưu không hoạt động thường xuyên nhưng có thể kích hoạt khi cần). Các môi trường sản xuất và thử nghiệm tại Northern Virginia hiện đang sử dụng Cloudflare CDN (mạng phân phối nội dung của Cloudflare), và sẽ được chuyển sang <a href="https://aws.amazon.com/cloudfront/">Amazon CloudFront</a> (dịch vụ CDN của AWS) trong tương lai. LucidScale (công cụ trực quan hóa hạ tầng đám mây) được sử dụng để sơ đồ hóa toàn bộ kiến trúc AWS nhằm giúp nhân viên hiểu rõ hệ thống và hỗ trợ vận hành về sau.</p>
+<h3 id="mở-rộng-tác-động-thông-qua-công-nghệ-đám-mây"><strong>Mở rộng tác động thông qua công nghệ đám mây</strong></h3>
+<p>Sự hỗ trợ từ AWS Imagine Grant đang giúp Humane World for Animals chuyển từ hệ thống công nghệ phân tán sang hệ thống thống nhất trên AWS. Việc chuyển đổi từ kiến trúc beta sang các dịch vụ AWS được thiết kế để thúc đẩy khả năng triển khai toàn cầu và tăng khả năng mở rộng khi nhóm tiến tới đưa ứng dụng vào sản xuất. Dự án sẽ tiếp tục thúc đẩy sứ mệnh của tổ chức thông qua các kết quả dựa trên hiệu quả thực tế.</p>
+<p>Humane World Apps hiện đang trong giai đoạn đầu triển khai tại nhiều quốc gia, xây dựng trên thành công của giai đoạn beta tại Ấn Độ. Giai đoạn beta đã cung cấp phản hồi mạnh mẽ về hiệu quả của ứng dụng, chứng minh rằng công nghệ có thể thay đổi kết quả phúc lợi động vật khi được triển khai và mở rộng đúng cách.</p>
+<p>Ứng dụng web đóng vai trò là trung tâm quản trị nơi các quản lý chương trình thiết kế và giám sát hoạt động, cung cấp phản hồi cho đội tiêm chủng, tạo báo cáo, và quản lý dữ liệu trên nhiều khu vực. Cách tiếp cận tập trung này cho phép phối hợp tốt hơn và phân bổ nguồn lực hiệu quả hơn trên các chương trình toàn cầu.</p>
+<h3 id="lời-khuyên-cho-việc-triển-khai-công-nghệ-phi-lợi-nhuận"><strong>Lời khuyên cho việc triển khai công nghệ phi lợi nhuận</strong></h3>
+<p>Humane World for Animals đưa ra lời khuyên hữu ích cho các tổ chức phi lợi nhuận bắt đầu dự án công nghệ. Thứ nhất, họ khuyến nghị mạnh mẽ việc tận dụng tài nguyên từ Amazon, đặc biệt là sự hướng dẫn từ kiến trúc sư giải pháp kỹ thuật của họ. Thứ hai, họ nhấn mạnh việc giữ vững mục tiêu cuối cùng—khi gặp khó khăn, hãy nhớ đến tác động của dự án đối với cuộc sống của những chú chó ngoài đường. Cuối cùng, họ nhấn mạnh tầm quan trọng của việc triển khai các quy trình vòng đời phát triển phần mềm từ sớm. Việc thiết lập kiểm soát mã nguồn và hệ thống ưu tiên lỗi và yêu cầu trước khi bắt đầu là rất quan trọng, vì thực hiện giữa chừng đã tiêu tốn thời gian quý giá từ khoản tài trợ. Dù khó khăn là điều không thể tránh khỏi, nhóm nhấn mạnh rằng sứ mệnh khiến việc vượt qua chúng trở nên xứng đáng.</p>
+<p>Thông qua AWS Imagine Grant, Humane World for Animals đang thay đổi cách các chương trình phúc lợi động vật vận hành trên toàn cầu—tạo ra một thế giới nhân đạo hơn cho hàng triệu động vật đồng thời</p>
+<p><strong>Cách bạn có thể hỗ trợ Humane World for Animals</strong> <br>
+Để tìm hiểu thêm về cách bạn có thể hỗ trợ Humane World for Animals, hãy <a href="https://www.humaneworld.org/">truy cập trang web chính thức của tổ chức.</a></p>
+<p>TAGS: <a href="https://aws.amazon.com/blogs/publicsector/tag/aws-imagine-grant/">AWS Imagine Grant</a>, <a href="https://aws.amazon.com/blogs/publicsector/tag/aws-public-sector/">AWS Public Sector</a>, <a href="https://aws.amazon.com/blogs/publicsector/tag/customer-story/">customer story</a>, <a href="https://aws.amazon.com/blogs/publicsector/tag/nonprofit/">nonprofit</a></p>
+<p><strong>Stacy Stonich</strong> <br>
+Stacy là Phó Chủ tịch cấp cao phụ trách Công nghệ &amp; Giải pháp Thông tin tại Humane World for Animals. Bà lãnh đạo các nhóm phụ trách toàn bộ hạ tầng, bảo mật, ứng dụng và dữ liệu vận hành trơn tru. Với hơn 20 năm kinh nghiệm dẫn dắt các nhóm công nghệ cấp quốc gia và toàn cầu, Stacy đam mê xây dựng tổ chức vững mạnh, thúc đẩy hiệu quả vận hành và đảm bảo khách hàng có trải nghiệm tốt nhất.</p>
+<p><strong>Jules Marenghi</strong> <br>
+Jules là Quản lý phát triển kinh doanh tại AWS. Cô tham gia vào nhóm phụ trách chương trình Imagine Grant và hội nghị liên quan, hỗ trợ các tổ chức phi lợi nhuận trên toàn thế giới trong việc ứng dụng công nghệ đám mây.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/" title="3.2 Humane World for Animals uses AWS to scale global animal welfare programs"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/" title="3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/clipboard.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/perfect-scrollbar.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/perfect-scrollbar.jquery.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/jquery.sticky.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/featherlight.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/highlight.pack.js?1762707569"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/modernizr.custom-3.6.0.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/learn.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/hugo-learn.js?1762707569"></script>
+
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/mermaid/mermaid.css?1762707569" rel="stylesheet" />
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/mermaid/mermaid.js?1762707569"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
+

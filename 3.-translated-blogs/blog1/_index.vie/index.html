@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/AWS_InternshipReport_FCJ/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=AWS_InternshipReport_FCJ/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.150.0">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="http://localhost:1313/AWS_InternshipReport_FCJ/images/favicon.png" type="image/png">
+
+    <title>3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring :: AWS System Manager</title>
+
+    
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/nucleus.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/fontawesome-all.min.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/hybrid.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/featherlight.min.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/perfect-scrollbar.min.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/auto-complete.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/atom-one-dark-reasonable.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/theme.css?1762707569" rel="stylesheet">
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/hugo-theme.css?1762707569" rel="stylesheet">
+    
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/css/theme-workshop.css?1762707569" rel="stylesheet">
+    
+    
+
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/jquery-3.3.1.min.js?1762707569"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/_index.vie/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="http://localhost:1313/AWS_InternshipReport_FCJ/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="http://localhost:1313/AWS_InternshipReport_FCJ/js/lunr.min.js?1762707569"></script>
+<script type="text/javascript" src="http://localhost:1313/AWS_InternshipReport_FCJ/js/auto-complete.js?1762707569"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/localhost:1313\/AWS_InternshipReport_FCJ\/";
+    
+</script>
+<script type="text/javascript" src="http://localhost:1313/AWS_InternshipReport_FCJ/js/search.js?1762707569"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/" title="1.Worklog" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/">
+          1.Worklog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week9/" title="Week 9" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week9/">
+           <b> 1.9. </b> Week 9
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week7/" title="Week 7" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week7/">
+          Week 7
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week1/" title="Week 1: Foundations" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week1/">
+          Week 1: Foundations
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week8/" title="Week 8" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week8/">
+          Week 8
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week2/" title="Week 2: Compute Services" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week2/">
+          Week 2: Compute Services
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week3/" title="Week 3: Storage &amp; Databases" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week3/">
+          Week 3: Storage &amp; Databases
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week4/" title="Week 4: Networking &amp; Security" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week4/">
+          Week 4: Networking &amp; Security
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week5/" title="Week 5: Monitoring &amp; Management" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week5/">
+          Week 5: Monitoring &amp; Management
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1.-worklog/week6/" title="Week 6: Advanced Topics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/1.-worklog/week6/">
+          Week 6: Advanced Topics
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2.-proposal/" title="2. Proposal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/2.-proposal/">
+          2. Proposal
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/" title="3. Translated Blogs" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/">
+          3. Translated Blogs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/_index.vie/" title="3. Bài Viết Dịch Thuật" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/_index.vie/">
+        3. Bài Viết Dịch Thuật
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/blog1/" title="3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/">
+          3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/blog1/_index.vie/" title="3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring" class="dd-item active">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/_index.vie/">
+        3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/blog2/" title="3.2 Humane World for Animals uses AWS to scale global animal welfare programs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/">
+          3.2 Humane World for Animals uses AWS to scale global animal welfare programs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/blog2/_index.vie/" title="3.2 Humane World for Animals uses AWS to scale global animal welfare programs" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/_index.vie/">
+        3.2 Humane World for Animals uses AWS to scale global animal welfare programs
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3.-translated-blogs/blog3/" title="3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/">
+          3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/3.-translated-blogs/blog3/_index.vie/" title="3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog3/_index.vie/">
+        3.3 AWS collaborates with Chugai Pharmaceutical Co. on quantum-inspired and constraint programming methods for cyclic peptide-protein docking
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/" title="5. Events Participated" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/">
+          5. Events Participated
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/event1/" title="Event 1" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/event1/">
+          Event 1
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/event2/" title="Event 2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/event2/">
+          Event 2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/events/event3/" title="Event 3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/events/event3/">
+           <b> 4.3. </b> Event 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/6.-self-ass/" title="6. Self-evaluation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/6.-self-ass/">
+          6. Self-evaluation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/6.-self-ass/_index.vie/" title="" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/6.-self-ass/_index.vie/">
+        
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/7.-sharing-and-feedback/" title="7. Sharing and Feedback" class="dd-item 
+        
+        
+        
+        ">
+      <a href="http://localhost:1313/AWS_InternshipReport_FCJ/7.-sharing-and-feedback/">
+          7. Sharing and Feedback
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/7.-sharing-and-feedback/_index.vie/" title="" class="dd-item ">
+        <a href="http://localhost:1313/AWS_InternshipReport_FCJ/7.-sharing-and-feedback/_index.vie/">
+        
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+  
+    <section id="prefooter">
+      <hr/>
+      <ul>
+  
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/_index.vie/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>30-01-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+               
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='http://localhost:1313/AWS_InternshipReport_FCJ/'>Internship Report</a> > <a href='http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/'>3. Translated Blogs</a> > <a href='http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/'>3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring</a> > 3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#hướng-dẫn-thiết-lập-giám-sát-amazon-opensearch-serverless-với-cloudwatch"><strong>Hướng dẫn thiết lập giám sát Amazon OpenSearch Serverless với CloudWatch</strong></a>
+      <ul>
+        <li><a href="#lợi-ích-chính-của-giám-sát-cloudwatch-cho-opensearch-serverless"><strong>Lợi ích chính của giám sát CloudWatch cho OpenSearch Serverless</strong></a></li>
+        <li><a href="#tổng-quan-về-giải-pháp"><strong>Tổng quan về giải pháp</strong></a></li>
+        <li><a href="#điều-kiện-tiên-quyết"><strong>Điều kiện tiên quyết</strong></a></li>
+        <li><a href="#các-chỉ-số-cloudwatch-và-cảnh-báo-được-đề-xuất-cho-opensearch-serverless"><strong>Các chỉ số CloudWatch và cảnh báo được đề xuất cho OpenSearch Serverless</strong></a></li>
+        <li><a href="#các-bước-để-tạo-cảnh-báo-cloudwatch"><strong>Các bước để tạo cảnh báo CloudWatch</strong></a></li>
+        <li><a href="#bảng-điều-khiển-cloudwatch"><strong>Bảng điều khiển CloudWatch</strong></a></li>
+        <li><a href="#dọn-dẹp"><strong>Dọn dẹp</strong></a></li>
+        <li><a href="#kết-luận"><strong>Kết luận</strong></a></li>
+        <li><a href="#liên-kết-liên-quan"><strong>Liên kết liên quan</strong></a></li>
+        <li><a href="#về-các-tác-giả"><strong>Về các tác giả</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring
+            </h1>
+          
+
+        
+
+
+<h1 id="blog-dữ-liệu-lớn-aws-aws-big-data-blog"><strong>Blog Dữ liệu Lớn AWS (AWS Big Data Blog)</strong></h1>
+<hr>
+<h2 id="hướng-dẫn-thiết-lập-giám-sát-amazon-opensearch-serverless-với-cloudwatch"><strong>Hướng dẫn thiết lập giám sát Amazon OpenSearch Serverless với CloudWatch</strong></h2>
+<p><strong>bởi Urmila Iyer và Parth Shah on</strong> 24 tháng 9, 2025 <strong>trong <a href="https://aws.amazon.com/blogs/big-data/category/learning-levels/advanced-300/">Advanced (300)</a>, <a href="https://aws.amazon.com/blogs/big-data/category/management-tools/amazon-cloudwatch/">Amazon CloudWatch</a>, <a href="https://aws.amazon.com/blogs/big-data/category/analytics/amazon-elasticsearch-service/">Amazon OpenSearch Service</a>, <a href="https://aws.amazon.com/blogs/big-data/category/management-and-governance/monitoring-and-observability/">Monitoring and observability</a>, <a href="https://aws.amazon.com/blogs/big-data/category/serverless/">Serverless</a>, <a href="https://aws.amazon.com/blogs/big-data/category/post-types/technical-how-to/">Technical How-to</a> <a href="https://aws.amazon.com/blogs/big-data/amazon-opensearch-serverless-monitoring-a-cloudwatch-setup-guide/">Permalink</a>  <a href="https://aws.amazon.com/blogs/big-data/amazon-opensearch-serverless-monitoring-a-cloudwatch-setup-guide/#Comments">Comments</a>  <a href="https://aws.amazon.com/blogs/big-data/amazon-opensearch-serverless-monitoring-a-cloudwatch-setup-guide/">Share</a></strong></p>
+<hr>
+<p><a href="https://aws.amazon.com/opensearch-service/features/serverless/">Amazon OpenSearch Serverless</a> đơn giản hóa việc triển khai và quản lý các khối lượng công việc OpenSearch bằng cách tự động mở rộng dựa trên mô hình sử dụng của bạn. Dịch vụ này xem xét các chỉ số chính như sử dụng phân đoạn (shard utilization), mức tiêu thụ lưu trữ (storage consumption), và sử dụng CPU trong khi duy trì thời gian phản hồi ở mức mili giây, với sự đơn giản của môi trường không máy chủ (serverless environment).</p>
+<p>Mặc dù OpenSearch Serverless tự động xử lý việc mở rộng, việc triển khai giám sát mạnh mẽ vẫn rất quan trọng để hiểu mô hình sử dụng, tối ưu hóa chi phí, đảm bảo hiệu suất và duy trì độ tin cậy. Giám sát chủ động giúp các tổ chức phát hiện các vấn đề quan trọng với ứng dụng hoặc cơ sở hạ tầng trong thời gian thực và nhanh chóng xác định nguyên nhân gốc rễ.</p>
+<p>Bài viết này thuộc loạt bài về giám sát dịch vụ Amazon OpenSearch, tập trung vào các khối lượng công việc và triển khai OpenSearch Serverless. Trong bài viết này, chúng tôi khám phá các <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/monitoring-cloudwatch.html">chỉ số CloudWatch</a> và <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html">cảnh báo</a> thường được sử dụng cho OpenSearch Serverless, hướng dẫn quy trình chọn các chỉ số phù hợp, thiết lập ngưỡng thích hợp, và cấu hình cảnh báo. Hướng dẫn này sẽ cung cấp cho bạn một chiến lược giám sát toàn diện, bổ sung cho bản chất không máy chủ của triển khai OpenSearch của bạn trong khi duy trì khả năng quan sát vận hành đầy đủ.</p>
+<h3 id="lợi-ích-chính-của-giám-sát-cloudwatch-cho-opensearch-serverless"><strong>Lợi ích chính của giám sát CloudWatch cho OpenSearch Serverless</strong></h3>
+<p>Việc triển khai giám sát CloudWatch cho các bộ sưu tập (collections) OpenSearch Serverless mang lại một số lợi ích chính:</p>
+<ul>
+<li><strong>Giám sát hiệu suất gần thời gian thực</strong> : CloudWatch cung cấp khả năng giám sát gần thời gian thực, cho phép bạn theo dõi hiệu suất của các bộ sưu tập OpenSearch Serverless trong quá trình hoạt động. Khả năng quan sát tức thì này cho phép phát hiện nhanh các bất thường hoặc vấn đề hiệu suất, giúp phản hồi kịp thời với các vấn đề tiềm ẩn.</li>
+<li><strong>Chẩn đoán lỗi hiệu quả</strong>: Bạn có thể nhanh chóng xác định và giải quyết các lỗi phổ biến mà không cần phân tích nhật ký phức tạp. Ví dụ, bằng cách giám sát lỗi yêu cầu nhập liệu (ingestion request errors), bạn có thể chủ động giảm thiểu các lỗi yêu cầu lập chỉ mục hàng loạt (bulk indexing request failures).</li>
+<li><strong>Hệ thống cảnh báo chủ động</strong>: Sử dụng chức năng cảnh báo CloudWatch kết hợp với Dịch vụ Thông báo Đơn giản Amazon (Amazon Simple Notification Service - SNS) để thiết lập các cảnh báo tùy chỉnh. Bằng cách xác định các ngưỡng cụ thể cho các chỉ số quan trọng, bạn có thể nhận thông báo tức thì qua email hoặc SMS khi các bộ sưu tập OpenSearch Serverless của bạn tiếp cận hoặc vượt quá các giới hạn này.</li>
+<li><strong>Phân tích lịch sử toàn diện</strong>: Khả năng lưu giữ dữ liệu của CloudWatch cho phép phân tích lịch sử chuyên sâu. Điều này giúp bạn xác định xu hướng hiệu suất dài hạn, nhận ra các mô hình lặp lại trong việc sử dụng tài nguyên và tối ưu hóa phân phối khối lượng công việc dựa trên thông tin lịch sử.</li>
+</ul>
+<h3 id="tổng-quan-về-giải-pháp"><strong>Tổng quan về giải pháp</strong></h3>
+<p>Việc hiểu các chỉ số cần giám sát trong OpenSearch Serverless giúp tối ưu hóa hiệu suất và độ tin cậy của hệ thống. Hướng dẫn này giải thích các chỉ số chính cần giám sát, ý nghĩa của chúng, cách xác định ngưỡng phù hợp, và quy trình từng bước để thiết lập cảnh báo. Hiểu các nguyên tắc cơ bản này sẽ giúp bạn thiết lập giám sát hiệu quả cho các bộ sưu tập OpenSearch Serverless và duy trì hiệu suất cũng như độ tin cậy tối ưu.</p>
+<h3 id="điều-kiện-tiên-quyết"><strong>Điều kiện tiên quyết</strong></h3>
+<p>Trước khi bắt đầu, bạn cần có các điều kiện sau:</p>
+<ul>
+<li><a href="https://signin.aws.amazon.com/signup?request_type=register">Một tài khoản AWS</a> cung cấp quyền truy cập vào các dịch vụ AWS.</li>
+<li><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-getting-started.html">Một bộ sưu tập OpenSearch Serverless</a> (OpenSearch Serverless collection).</li>
+</ul>
+<h3 id="các-chỉ-số-cloudwatch-và-cảnh-báo-được-đề-xuất-cho-opensearch-serverless"><strong>Các chỉ số CloudWatch và cảnh báo được đề xuất cho OpenSearch Serverless</strong></h3>
+<p>Bảng dưới đây tóm tắt các chỉ số CloudWatch chính cho OpenSearch Serverless, bao gồm các ngưỡng cảnh báo được đề xuất, mô tả chỉ số, và các loại khối lượng công việc áp dụng.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Cảnh báo</th>
+          <th>Cấp độ chỉ số</th>
+          <th>Mô tả chỉ số</th>
+          <th>Mô tả cảnh báo</th>
+          <th>Trường hợp sử dụng</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>IndexingOCU tối đa &gt;= 10 trong 5 phút, ba lần liên tiếp</td>
+          <td>Cấp tài khoản (Account Level)</td>
+          <td>Dung lượng tính toán không máy chủ được đo bằng Đơn vị Tính toán OpenSearch (OpenSearch Compute Units - OCU). Mỗi OCU là sự kết hợp của 6 GiB bộ nhớ và CPU ảo tương ứng (virtual CPU - vCPU), ngoài ra còn có truyền dữ liệu đến Dịch vụ Lưu trữ Đơn giản Amazon (<a href="https://aws.amazon.com/s3">Amazon Simple Storage Service - Amazon S3</a>). Chỉ số IndexingOCU báo cáo số lượng OCU được sử dụng để nhập dữ liệu qua tất cả các bộ sưu tập.</td>
+          <td>Cảnh báo này sẽ thông báo khi OCU lập chỉ mục mở rộng lên hoặc vượt quá 10 trong hơn 15 phút.</td>
+          <td>Giám sát và Tối ưu hóa Chi phí (Monitor and Optimize Costs)</td>
+      </tr>
+      <tr>
+          <td>SearchOCU tối đa &gt;= 10 trong 5 phút, ba lần liên tiếp</td>
+          <td>Cấp tài khoản (Account Level)</td>
+          <td>Dung lượng tính toán không máy chủ được đo bằng OCU. Chỉ số SearchOCU báo cáo số lượng OCU được sử dụng để tìm kiếm dữ liệu bộ sưu tập qua tất cả các bộ sưu tập.</td>
+          <td>Cảnh báo này sẽ thông báo khi OCU tìm kiếm mở rộng lên hoặc vượt quá 10 trong hơn 15 phút.</td>
+          <td>Giám sát và Tối ưu hóa Chi phí (Monitor and Optimize Costs)</td>
+      </tr>
+      <tr>
+          <td>IngestionRequestLatency tối đa &gt;= 3 giây trong 1 phút, năm lần liên tiếp</td>
+          <td>Cấp bộ sưu tập (Collection Level)</td>
+          <td>Chỉ số IngestionRequestLatency báo cáo độ trễ, tính bằng giây, cho các thao tác ghi hàng loạt vào một bộ sưu tập.</td>
+          <td>Cảnh báo này giám sát độ trễ tối đa của các thao tác ghi hàng loạt vào một bộ sưu tập. Nó kích hoạt khi độ trễ tối đa IngestionRequestLatency vượt quá 3 giây trong năm khoảng thời gian 1 phút liên tiếp (tổng cộng 5 phút). Điều này cho thấy sự suy giảm hiệu suất kéo dài trong các thao tác nhập dữ liệu, có thể ảnh hưởng đến hiệu suất ứng dụng và tính khả dụng của dữ liệu.</td>
+          <td>Chỉ số này có thể quan trọng để giám sát cho các khối lượng công việc dựa trên nhật ký, nơi thời gian lập chỉ mục là quan trọng.</td>
+      </tr>
+      <tr>
+          <td>SearchRequestLatency tối đa &gt;= 2 giây trong 1 phút, năm lần liên tiếp</td>
+          <td>Cấp bộ sưu tập (Collection Level)</td>
+          <td>Chỉ số SearchRequestLatency báo cáo độ trễ, tính bằng giây, để hoàn thành một thao tác tìm kiếm đối với một bộ sưu tập.</td>
+          <td>Cảnh báo này giám sát độ trễ tối đa của các thao tác tìm kiếm đối với một bộ sưu tập. Nó kích hoạt khi độ trễ tối đa SearchRequestLatency vượt quá 2 giây trong năm khoảng thời gian 1 phút liên tiếp (tổng cộng 5 phút). Độ trễ tìm kiếm cao liên tục cho thấy các vấn đề hiệu suất có thể làm giảm trải nghiệm người dùng và khả năng phản hồi của ứng dụng.</td>
+          <td>Chỉ số này có thể quan trọng để giám sát cho các khối lượng công việc dựa trên tìm kiếm và vector, nơi thời gian tìm kiếm là quan trọng.</td>
+      </tr>
+      <tr>
+          <td>IngestionRequestErrors tổng &gt;= 100 lỗi trong 1 phút, năm lần liên tiếp</td>
+          <td>Cấp bộ sưu tập (Collection Level)</td>
+          <td>Chỉ số IngestionRequestErrors báo cáo tổng số lỗi yêu cầu lập chỉ mục hàng loạt cho một bộ sưu tập. OpenSearch Serverless phát ra chỉ số này khi có lỗi yêu cầu lập chỉ mục hàng loạt, chẳng hạn như vấn đề xác thực hoặc tính khả dụng.</td>
+          <td>Cảnh báo này giám sát tổng số thao tác lập chỉ mục hàng loạt thất bại cho một bộ sưu tập. Nó kích hoạt khi số lượng IngestionRequestErrors bằng hoặc vượt quá 100 lỗi trong năm khoảng thời gian 1 phút liên tiếp (tổng cộng 5 phút).</td>
+          <td>Các lỗi nhập liệu liên tục cho thấy các vấn đề hệ thống có thể dẫn đến mất dữ liệu hoặc không nhất quán.</td>
+      </tr>
+      <tr>
+          <td>SearchRequestErrors tổng &gt;= 50 lỗi trong 1 phút, năm lần liên tiếp</td>
+          <td>Cấp bộ sưu tập (Collection Level)</td>
+          <td>Chỉ số SearchRequestErrors báo cáo tổng số lỗi truy vấn tìm kiếm mỗi phút cho một bộ sưu tập.</td>
+          <td>Cảnh báo này giám sát tổng số thao tác truy vấn tìm kiếm thất bại trong một bộ sưu tập. Nó kích hoạt khi số lượng SearchRequestErrors bằng hoặc vượt quá 50 lỗi trong năm khoảng thời gian 1 phút liên tiếp (tổng cộng 5 phút).</td>
+          <td>Các lỗi tìm kiếm liên tục cho thấy các vấn đề tiềm ẩn có thể ảnh hưởng đến chức năng ứng dụng và trải nghiệm người dùng.</td>
+      </tr>
+      <tr>
+          <td>ActiveCollection tối thiểu = 0 trong 1 phút, ba lần liên tiếp</td>
+          <td>Cấp bộ sưu tập (Collection Level)</td>
+          <td>Chỉ số này cho biết liệu một bộ sưu tập có đang hoạt động hay không. Giá trị 1 có nghĩa là bộ sưu tập đang ở trạng thái HOẠT ĐỘNG (ACTIVE). Giá trị này được phát ra khi tạo thành công một bộ sưu tập và giữ nguyên 1 cho đến khi bạn xóa bộ sưu tập. Chỉ số này không thể có giá trị 0.</td>
+          <td>Cảnh báo kích hoạt khi chỉ số bị thiếu trong ba khoảng thời gian 1 phút liên tiếp (tổng cộng 3 phút). Vì một bộ sưu tập hoạt động luôn phát ra giá trị 1, dữ liệu bị thiếu cho thấy bộ sưu tập đã bị xóa hoặc đang gặp vấn đề nghiêm trọng. <strong>Lưu ý</strong>: Hãy đảm bảo thiết lập <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data">cảnh báo CloudWatch để xử lý dữ liệu bị thiếu như vi phạm</a> (breaching).</td>
+          <td>Giám sát Tính khả dụng của Bộ sưu tập (Monitor Availability of Collection)</td>
+      </tr>
+  </tbody>
+</table>
+<p>Các giá trị ngưỡng cụ thể được đề cập là ví dụ. Tuy nhiên, bạn có thể cần điều chỉnh các ngưỡng này dựa trên yêu cầu cụ thể và Thỏa thuận Cấp độ Dịch vụ (SLAs) của ứng dụng và khối lượng công việc của bạn trên OpenSearch Serverless.</p>
+<p>Để quyết định khi nào cần nâng giới hạn OCU toàn cầu, bạn nên thường xuyên xem xét các chỉ số IndexingOCU và SearchOCU ở cấp tài khoản. Nếu bạn nhận thấy các chỉ số liên tục tiếp cận ngưỡng đã đặt, đó là dấu hiệu bạn nên xem xét tăng giới hạn tài khoản tổng thể để đáp ứng nhu cầu sử dụng ngày càng tăng.</p>
+<p>Ngoài ra, hãy giám sát các chỉ số cấp bộ sưu tập như IngestionRequestLatency và SearchRequestLatency. Nếu bạn nhận thấy một số bộ sưu tập có độ trễ cao liên tục, đó có thể là dấu hiệu phân bổ OCU cho các bộ sưu tập cụ thể đó không đủ. Trong những trường hợp như vậy, bạn có thể xem xét tăng giới hạn OCU cho các bộ sưu tập có mức sử dụng cao, thay vì tăng giới hạn tài khoản toàn cầu.</p>
+<p>Bằng cách giám sát chặt chẽ cả chỉ số cấp tài khoản và cấp bộ sưu tập, bạn có thể đưa ra quyết định sáng suốt về thời điểm và cách điều chỉnh giới hạn OCU để duy trì hiệu suất tối ưu và hiệu quả chi phí cho triển khai OpenSearch Serverless của bạn.</p>
+<h3 id="các-bước-để-tạo-cảnh-báo-cloudwatch"><strong>Các bước để tạo cảnh báo CloudWatch</strong></h3>
+<p>Cảnh báo CloudWatch có thể được tạo bằng các phương pháp sau:</p>
+<ul>
+<li>Bảng điều khiển Quản lý AWS (AWS Management Console)</li>
+<li><a href="https://aws.amazon.com/cli">Giao diện Dòng lệnh AWS (AWS Command Line Interface - AWS CLI)</a></li>
+<li>Mẫu CloudFormation (JSON hoặc YAML)</li>
+</ul>
+<p>Các bước chi tiết và đoạn mã mẫu cho mỗi phương pháp được cung cấp trong các phần sau.</p>
+<h4 id="sử-dụng-bảng-điều-khiển"><strong>Sử dụng bảng điều khiển</strong></h4>
+<p>Bảng điều khiển Quản lý AWS cung cấp giao diện trực quan, dễ sử dụng để tạo cảnh báo CloudWatch. Làm theo các hướng dẫn từng bước sau để thiết lập cảnh báo của bạn qua bảng điều khiển.</p>
+<ol>
+<li>Truy cập vào <a href="https://console.aws.amazon.com/cloudwatch/">bảng điều khiển CloudWatch</a>.</li>
+<li>Trong ngăn điều hướng, chọn <strong>Cảnh báo (Alarms)</strong>, sau đó chọn <strong>Tất cả cảnh báo (All alarms)</strong>.</li>
+<li>Chọn <strong>Tạo cảnh báo (Create alarm)</strong>.<br>
+<img src="#ZgotmplZ" alt=""></li>
+<li>Chọn <strong>Chọn chỉ số (Select Metric)</strong>.</li>
+<li>Chọn không gian tên <strong>AOSS</strong>.<br>
+<img src="#ZgotmplZ" alt=""></li>
+<li>Để thiết lập cảnh báo cho IndexingOCU trên tất cả các bộ sưu tập, điều hướng đến <strong>ClientId</strong> và chọn chỉ số.</li>
+<li>Dưới <strong>Điều kiện (Conditions)</strong>:
+<ul>
+<li>Đối với <strong>Thống kê (Statistic)</strong>: Chọn <strong>Tối đa (Maximum)</strong>.</li>
+<li>Đối với <strong>Thời gian (Period)</strong>: Chọn <strong>5 phút</strong>.</li>
+<li>Đối với <strong>Loại ngưỡng (Threshold type)</strong>: Chọn <strong>Tĩnh (Static)</strong> và <strong>Lớn hơn (Greater)</strong>.</li>
+</ul>
+</li>
+</ol>
+<p><img src="#ZgotmplZ" alt=""></p>
+<ol start="8">
+<li>Chọn <strong>Tiếp theo (Next)</strong>. Dưới <strong>Thông báo (Notification)</strong>, chọn một chủ đề SNS để thông báo khi cảnh báo ở trạng thái <strong>BÁO ĐỘNG (ALARM)</strong>, <strong>OK</strong>, hoặc <strong>DỮ LIỆU KHÔNG ĐỦ (INSUFFICIENT_DATA)</strong>.</li>
+</ol>
+<p><img src="#ZgotmplZ" alt=""></p>
+<ol start="9">
+<li>Khi hoàn tất, chọn <strong>Tiếp theo (Next)</strong>. Nhập tên và mô tả cho cảnh báo. Tên phải chỉ chứa các ký tự UTF-8 và không được chứa các ký tự điều khiển ASCII. Mô tả có thể bao gồm định dạng markdown, được hiển thị trong tab <strong>Chi tiết (Details)</strong> trong bảng điều khiển CloudWatch. Markdown có thể hữu ích để thêm liên kết đến tài liệu hướng dẫn hoặc tài nguyên nội bộ. Sau đó, chọn <strong>Tiếp theo (Next)</strong>.</li>
+<li>Dưới <strong>Xem trước và tạo (Preview and create)</strong>, xác nhận thông tin và điều kiện là chính xác, sau đó chọn <strong>Tạo cảnh báo (Create alarm)</strong>.</li>
+</ol>
+<p>Để biết tài liệu chi tiết, tham khảo <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_alarm_static_threshold.html">Tạo cảnh báo Clou</a></p>
+<p><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_alarm_static_threshold.html">dWatch dựa trên ngưỡng tĩnh</a>.</p>
+<h4 id="sử-dụng-aws-cli"><strong>Sử dụng AWS CLI</strong></h4>
+<p>Đối với những người thích giao diện dòng lệnh hoặc cần tự động hóa việc tạo cảnh báo, AWS CLI cung cấp một giải pháp thay thế hiệu quả. Phần này thể hiện cách tạo cảnh báo CloudWatch bằng một lệnh CLI duy nhất.</p>
+<p>Để thiết lập cảnh báo CloudWatch bằng AWS CLI, bạn có thể sử dụng lệnh <a href="https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/put-metric-alarm.html">put-metric-alarm</a>. Ví dụ sau thể hiện cách tạo cảnh báo gửi email SNS của Amazon khi IndexingOCU vượt quá 2 trong 15 phút ở cấp tài khoản. Thay thế [region] và [account-id] bằng Vùng AWS và ID tài khoản của bạn.</p>
+<p>aws cloudwatch put-metric-alarm \<br>
+--alarm-description &lsquo;# IndexingOCU scaling out&rsquo; \<br>
+--actions-enabled \<br>
+--alarm-actions &lsquo;arn:aws:sns:[region]:[account-id]:SecurityHubRecurringSummary&rsquo; \<br>
+--metric-name &lsquo;IndexingOCU&rsquo; \<br>
+--namespace &lsquo;AWS/AOSS&rsquo; \<br>
+--statistic &lsquo;Maximum&rsquo; \<br>
+--dimensions &lsquo;[{&ldquo;Name&rdquo;:&ldquo;ClientId&rdquo;,&ldquo;Value&rdquo;:&quot;[account-id]&quot;}]&rsquo; \<br>
+--period 300 \<br>
+--evaluation-periods 3 \<br>
+--datapoints-to-alarm 3 \<br>
+--threshold 2 \<br>
+--comparison-operator &lsquo;GreaterThanThreshold&rsquo; \<br>
+--treat-missing-data &lsquo;ignore&rsquo;</p>
+<h4 id="cloudformation-json"><strong>CloudFormation JSON</strong></h4>
+<p>Cơ sở hạ tầng dưới dạng mã (Infrastructure as Code - IaC) cho phép triển khai có thể kiểm soát phiên bản và lặp lại. Mẫu JSON này cho thấy cách xác định cảnh báo CloudWatch bằng AWS CloudFormation, phù hợp cho những người thích cú pháp JSON cho triển khai IaC của họ.</p>
+<p>Thay thế [region] và [account-id] bằng Vùng AWS và ID tài khoản của bạn.</p>
+<p>{<br>
+&ldquo;Type&rdquo;: &ldquo;AWS::CloudWatch::Alarm&rdquo;,<br>
+&ldquo;Properties&rdquo;: {<br>
+&ldquo;AlarmDescription&rdquo;: &ldquo;# IndexingOCU scaling out&rdquo;,<br>
+&ldquo;ActionsEnabled&rdquo;: true,<br>
+&ldquo;OKActions&rdquo;: [],<br>
+&ldquo;AlarmActions&rdquo;: [<br>
+&ldquo;arn:aws:sns:[region]:[account-id]:SecurityHubRecurringSummary&rdquo;<br>
+],<br>
+&ldquo;InsufficientDataActions&rdquo;: [],<br>
+&ldquo;MetricName&rdquo;: &ldquo;IndexingOCU&rdquo;,<br>
+&ldquo;Namespace&rdquo;: &ldquo;AWS/AOSS&rdquo;,<br>
+&ldquo;Statistic&rdquo;: &ldquo;Maximum&rdquo;,<br>
+&ldquo;Dimensions&rdquo;: [<br>
+{<br>
+&ldquo;Name&rdquo;: &ldquo;ClientId&rdquo;,<br>
+&ldquo;Value&rdquo;: &ldquo;[account-id]&rdquo;<br>
+}<br>
+],<br>
+&ldquo;Period&rdquo;: 300,<br>
+&ldquo;EvaluationPeriods&rdquo;: 3,<br>
+&ldquo;DatapointsToAlarm&rdquo;: 3,<br>
+&ldquo;Threshold&rdquo;: 2,<br>
+&ldquo;ComparisonOperator&rdquo;: &ldquo;GreaterThanThreshold&rdquo;,<br>
+&ldquo;TreatMissingData&rdquo;: &ldquo;ignore&rdquo;<br>
+}<br>
+}</p>
+<h4 id="cloudformation-yaml"><strong>CloudFormation YAML</strong></h4>
+<p>Đối với các nhóm thích định dạng dễ đọc hơn của YAML, phần này cung cấp mẫu CloudFormation tương đương bằng YAML. Mẫu này tạo cảnh báo CloudWatch giống như phiên bản JSON.</p>
+<p>Thay thế [region] và [account-id] bằng Vùng AWS và ID tài khoản của bạn.</p>
+<p>Type: AWS::CloudWatch::Alarm<br>
+Properties:<br>
+AlarmDescription: &ldquo;# IndexingOCU scaling out&rdquo;<br>
+ActionsEnabled: true<br>
+OKActions: []<br>
+AlarmActions:<br>
+- arn:aws:sns:[region]:[account-id]:SecurityHubRecurringSummary<br>
+InsufficientDataActions: []<br>
+MetricName: IndexingOCU<br>
+Namespace: AWS/AOSS<br>
+Statistic: Maximum<br>
+Dimensions:<br>
+- Name: ClientId<br>
+Value: &ldquo;[account-id]&rdquo;<br>
+Period: 300<br>
+EvaluationPeriods: 3<br>
+DatapointsToAlarm: 3<br>
+Threshold: 2<br>
+ComparisonOperator: GreaterThanThreshold<br>
+TreatMissingData: ignore</p>
+<h3 id="bảng-điều-khiển-cloudwatch"><strong>Bảng điều khiển CloudWatch</strong></h3>
+<p>Bạn có thể sử dụng các <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Dashboards.html">bảng điều khiển CloudWatch</a> để giám sát nhiều tài nguyên trong một giao diện thống nhất. Ví dụ, bảng điều khiển sau cung cấp một cái nhìn tổng hợp về việc sử dụng OCU của OpenSearch Serverless, giúp bạn theo dõi và quản lý chi phí.</p>
+<h3 id="dọn-dẹp"><strong>Dọn dẹp</strong></h3>
+<p>Để tránh phát sinh chi phí không mong muốn trong tương lai, hãy xóa các tài nguyên sau được tạo trong quá trình thực hiện hướng dẫn này:</p>
+<ul>
+<li>Cảnh báo CloudWatch (CloudWatch alarms)</li>
+<li>Ngăn xếp CloudFormation (CloudFormation stacks)</li>
+<li>Chủ đề SNS (SNS topics)</li>
+</ul>
+<h3 id="kết-luận"><strong>Kết luận</strong></h3>
+<p>Giám sát hiệu quả giúp duy trì hiệu suất và độ tin cậy tối ưu của các bộ sưu tập OpenSearch Serverless của bạn. Bằng cách triển khai các cảnh báo và chiến lược giám sát CloudWatch được nêu trong bài viết này, bạn có thể chủ động xác định và phản hồi các vấn đề hiệu suất trước khi chúng ảnh hưởng đến ứng dụng của bạn, tối ưu hóa chi phí bằng cách theo dõi mô hình sử dụng OCU, hỗ trợ các mục tiêu khả dụng cao bằng cách giám sát sức khỏe và tỷ lệ lỗi của bộ sưu tập, và duy trì hiệu suất ổn định thông qua giám sát độ trễ. Hãy nhớ rằng các ngưỡng được đề xuất trong hướng dẫn này chỉ là điểm khởi đầu, bạn nên điều chỉnh chúng dựa trên các trường hợp sử dụng cụ thể, yêu cầu hiệu suất, và ràng buộc ngân sách của bạn. Việc xem xét và tinh chỉnh thường xuyên các cảnh báo này sẽ giúp bạn duy trì triển khai OpenSearch Serverless hiệu quả và tiết kiệm chi phí.</p>
+<h3 id="liên-kết-liên-quan"><strong>Liên kết liên quan</strong></h3>
+<ul>
+<li><a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-monitoring.html">Giám sát Amazon OpenSearch Serverless</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_alarm_static_threshold.html">Tạo cảnh báo CloudWatch dựa trên ngưỡng tĩnh</a></li>
+</ul>
+<h3 id="về-các-tác-giả"><strong>Về các tác giả</strong></h3>
+<h4 id="urmila-iyer"><strong>Urmila Iyer</strong></h4>
+<p><a href="https://www.linkedin.com/in/urmilaiyer/">Urmila</a> là Quản lý Tài khoản Kỹ thuật (Technical Account Manager) tại AWS, nơi cô hợp tác với các khách hàng doanh nghiệp để hiểu mục tiêu kinh doanh của họ và thiết kế các giải pháp mang lại kết quả ý nghĩa. Với 15 năm kinh nghiệm trong lĩnh vực CNTT, bao gồm 6 năm tại AWS, cô chuyên về các giải pháp dựa trên dữ liệu, mang lại sự nhiệt tình và chuyên môn cho các dự án phân tích dữ liệu sử dụng OpenSearch và các nền tảng phân tích thời gian thực.</p>
+<h4 id="parth-shah"><strong>Parth Shah</strong></h4>
+<p><a href="https://www.linkedin.com/in/parthshah27/">Parth</a> là Kiến trúc sư Giải pháp Cấp cao (Senior Solutions Architect) tại AWS, đam mê giải quyết các thách thức dữ liệu phức tạp cho các khách hàng chiến lược. Là một người đam mê phân tích, anh giúp các tổ chức hiểu rõ dữ liệu của họ thông qua các giải pháp đám mây sáng tạo, với chuyên môn sâu về triển khai OpenSearch. Ngoài công việc, anh thích dành thời gian với gia đình, khám phá các món ăn khác nhau và chơi cricket.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog1/" title="3.1 AWS Big Data Blog - OpenSearch Serverless Monitoring"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="http://localhost:1313/AWS_InternshipReport_FCJ/3.-translated-blogs/blog2/" title="3.2 Humane World for Animals uses AWS to scale global animal welfare programs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/clipboard.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/perfect-scrollbar.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/perfect-scrollbar.jquery.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/jquery.sticky.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/featherlight.min.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/highlight.pack.js?1762707569"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/modernizr.custom-3.6.0.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/learn.js?1762707569"></script>
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/js/hugo-learn.js?1762707569"></script>
+
+    <link href="http://localhost:1313/AWS_InternshipReport_FCJ/mermaid/mermaid.css?1762707569" rel="stylesheet" />
+    <script src="http://localhost:1313/AWS_InternshipReport_FCJ/mermaid/mermaid.js?1762707569"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
+
