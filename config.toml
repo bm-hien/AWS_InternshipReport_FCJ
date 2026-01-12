@@ -1,5 +1,5 @@
 # Change the default theme to be use when building the site with Hugo
-baseURL = "https://dophucduy.github.io/AWS_InternshipReport_FCJ/"
+baseURL = "https://bm-hien.github.io/AWS_InternshipReport_FCJ/"
 theme = "hugo-theme-learn"
 languageCode = "en-us"
 title = "AWS Learning Journey"
